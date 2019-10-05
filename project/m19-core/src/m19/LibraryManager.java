@@ -1,6 +1,8 @@
 package m19;
 
 // FIXME import system types
+import m19.exceptions.*;
+import java.io.IOException;
 // FIXME import project (core) types
 
 /**
@@ -8,6 +10,7 @@ package m19;
  */
 public class LibraryManager {
 
+  private String _filename;
   private Library _library;  // FIXME initialize this attribute
 
   // FIXME define other attributes
