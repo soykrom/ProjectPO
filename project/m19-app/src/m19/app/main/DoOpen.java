@@ -1,5 +1,12 @@
 package m19.app.main;
 
+import pt.tecnico.po.ui.DialogException;
+import pt.tecnico.po.ui.Command;
+import m19.LibraryManager;
+import m19.exceptions.FailedToOpenFileException;
+import m19.app.exceptions.FileOpenFailedException;
+import java.io.IOException;
+
 // FIXME import core concepts
 // FIXME import ui concepts
 
@@ -21,6 +28,7 @@ public class DoOpen extends Command<LibraryManager> {
   /** @see pt.tecnico.po.ui.Command#execute() */
   @Override
   public final void execute() throws DialogException {
+    /*
     try {
       // FIXME implement command
     } catch (FailedToOpenFileException fnfe) {
@@ -28,6 +36,7 @@ public class DoOpen extends Command<LibraryManager> {
     } catch (ClassNotFoundException | IOException e) {
       e.printStackTrace();
     }
+    */
   }
 
 }

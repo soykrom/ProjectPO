@@ -1,7 +1,7 @@
 package m19.app.main;
 
-import m19.LibraryManager;
 import pt.tecnico.po.ui.Command;
+import m19.LibraryManager;
 
 /**
  * 4.1.4. Command to open the users menu.

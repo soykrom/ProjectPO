@@ -1,5 +1,8 @@
 package m19.app.main;
 
+import pt.tecnico.po.ui.DialogException;
+import pt.tecnico.po.ui.Command;
+import m19.LibraryManager;
 // FIXME import core concepts
 // FIXME import ui concepts
 
@@ -23,5 +26,4 @@ public class DoAdvanceDate extends Command<LibraryManager> {
   public final void execute() {
     // FIXME define method
   }
-  
 }
