@@ -9,3 +9,5 @@ all:
 clean:
 	$(RM) $(JARNAME).jar `find . -name \*.class`
 
+run: all
+	cd ..; java m19.app.App
