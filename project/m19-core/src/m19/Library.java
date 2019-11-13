@@ -16,9 +16,16 @@ public class Library implements Serializable {
   private static final long serialVersionUID = 201901101348L;
 
   // FIXME define attributes
+  private int _date;
+
+  private int _lastID;
+
 
   // FIXME define contructor(s)
-
+  public Library() {
+    _date = 0;
+    _lastID = 1;
+  }
   // FIXME define methods
 
   /**
@@ -30,6 +37,7 @@ public class Library implements Serializable {
    * @throws BadEntrySpecificationException
    * @throws IOException
    */
+
   void importFile(String filename) throws BadEntrySpecificationException, IOException {
     // FIXME implement method
   }
