@@ -24,19 +24,17 @@ public class DoOpen extends Command<LibraryManager> {
    */
   public DoOpen(LibraryManager receiver) {
     super(Label.OPEN, receiver);
-
     _filename = _form.addStringInput(Message.openFile());
   }
 
   /** @see pt.tecnico.po.ui.Command#execute() */
   @Override
   public final void execute() throws DialogException {
-    /*
+    _form.parse();
     try {
-      // FIXME implement command
+      _receiver.load(_filename.value());
     } catch(FailedToOpenFileException fnfe) {throw new FileOpenFailedException(fnfe.getName());}
       catch(ClassNotFoundException | IOException e) {e.printStackTrace();}
-  */
   }
 
 }
