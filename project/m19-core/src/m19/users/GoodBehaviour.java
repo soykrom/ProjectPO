@@ -1,4 +1,4 @@
-package  m19;
+package m19.users;
 
 public class GoodBehaviour extends UserBehaviour {
     //atributes

@@ -1,15 +1,15 @@
-package m19;
+package m19.users;
 import java.util.Map;
 import java.util.TreeMap;
 
 
-public class LibraryUser {
+public class User {
     //Atributes
     private int _userID;
 
     private String _name;
 
-    private String _mail;
+    private String _email;
 
     private boolean _status;
     
@@ -17,10 +17,10 @@ public class LibraryUser {
     //private requests;
 
     //Methods
-    public LibraryUser(int id, String name, String mail) {
+    public User(int id, String name, String email) {
         _userID = id;
         _name = name;
-        _mail = mail;
+        _email = email;
         _status = true;
         _behaviour = new NormalBehaviour();
     }
@@ -34,7 +34,7 @@ public class LibraryUser {
     }
 
     public String getMail() {
-        return _mail;
+        return _email;
     }
 
     public boolean getStatus() {

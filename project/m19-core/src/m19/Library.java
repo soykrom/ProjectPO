@@ -1,9 +1,24 @@
 package m19;
 
 // FIXME import system types
-import m19.exceptions.*;
+import m19.exceptions.MissingFileAssociationException;
+import m19.exceptions.BadEntrySpecificationException;
+import m19.exceptions.UserRegistrationFailException;
+import m19.exceptions.FailedToOpenFileException;
+import m19.exceptions.ImportFileException;
+import java.lang.ClassNotFoundException;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+
+import java.io.BufferedInputStream;
+import java.io.ObjectInputStream;
+import java.io.FileInputStream;
+import java.io.BufferedReader;
 import java.io.Serializable;
+import java.io.FileReader;
+import java.util.TreeMap;
+import m19.users.User;
+import java.util.Map;
 
 // FIXME import project (core) types
 
@@ -20,11 +35,15 @@ public class Library implements Serializable {
 
   private int _lastID;
 
+  private Map<Integer, User> _users;
 
+  //private Map<Integer, Work> _works;
   // FIXME define contructor(s)
   public Library() {
     _date = 0;
-    _lastID = 1;
+    _lastID = 0;
+    _users = new TreeMap<Integer, User>();
+    //_works = new TreeMap<Integer, Work>();
   }
   // FIXME define methods
 
@@ -39,7 +58,53 @@ public class Library implements Serializable {
    */
 
   void importFile(String filename) throws BadEntrySpecificationException, IOException {
-    // FIXME implement method
+    int nLine = 0;
+
+    try {
+      BufferedReader rdIn = new BufferedReader(new FileReader(filename));
+      String btLine;
+
+      while((btLine = rdIn.readLine()) != null) {
+        String line = new String(btLine.getBytes(), "UTF-8");
+
+        nLine++;
+
+        if(line.charAt(0) == '#') continue; //ignores comments
+
+        String[] split = line.split(":");
+
+        switch(split[0]) {
+          case "USER":
+            addUser(split[1], split[2]);
+            break;
+          case "DVD":
+            break;
+          case "BOOK":
+            break;
+          default:
+            throw new BadEntrySpecificationException(split[0]);
+        } 
+      }
+
+      rdIn.close();
+    } catch(BadEntrySpecificationException e) {e.printStackTrace();}
+      catch(UserRegistrationFailException e) {e.printStackTrace();}
   }
 
+  public int getDate() {
+    return _date;
+  }
+
+  public void setDate(int date) {
+    _date = date;
+  }
+
+  public void addUser(String name, String email) throws UserRegistrationFailException {
+    if(name == null || email == null) throw new UserRegistrationFailException();
+
+    User newUser = new User(_lastID, name, email);
+
+    _users.put(_lastID, newUser);
+    _lastID++;
+  }
 }

@@ -8,6 +8,3 @@ all:
 
 clean:
 	$(RM) $(JARNAME).jar `find . -name \*.class`
-
-
-#export CLASSPATH=/./m19-core/m19-core.jar:/./m19-app/m19-app.jar:/./po-uuilib/po-uuilib.jar:/.
