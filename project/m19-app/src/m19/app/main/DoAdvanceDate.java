@@ -31,8 +31,6 @@ public class DoAdvanceDate extends Command<LibraryManager> {
 
     _receiver.advanceDate(_delta.value());
     _display.popup(Message.currentDate(_receiver.getDate()));
-
-    _receiver.changeSaved();
     //requestHandler();
     //notificationHandler();
   }

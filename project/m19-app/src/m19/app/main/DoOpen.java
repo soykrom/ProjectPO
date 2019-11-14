@@ -31,11 +31,12 @@ public class DoOpen extends Command<LibraryManager> {
   /** @see pt.tecnico.po.ui.Command#execute() */
   @Override
   public final void execute() throws DialogException {
-    
+    /*
     try {
       // FIXME implement command
     } catch(FailedToOpenFileException fnfe) {throw new FileOpenFailedException(fnfe.getName());}
       catch(ClassNotFoundException | IOException e) {e.printStackTrace();}
+  */
   }
 
 }

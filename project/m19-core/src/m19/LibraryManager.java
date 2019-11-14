@@ -1,6 +1,6 @@
 package m19;
 
-// FIXME import system types
+// FIXME import system types?
 import m19.exceptions.MissingFileAssociationException;
 import m19.exceptions.BadEntrySpecificationException;
 import m19.exceptions.UserRegistrationFailException;
@@ -93,8 +93,8 @@ public class LibraryManager {
     return _filename;
   }
 
-  public void changeSaved() {
-    _saveStatus = (_saveStatus ? false : true);
+  public void changeSaved(boolean newStatus) {
+    _saveStatus = newStatus;
   }
 
   public int getDate() {

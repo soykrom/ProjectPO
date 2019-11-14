@@ -36,8 +36,5 @@ public class DoSave extends Command<LibraryManager> {
       _receiver.saveAs(_filename.value());
     } catch(MissingFileAssociationException e) {e.printStackTrace();}
       catch(IOException e) {e.printStackTrace();}
-
-    _receiver.changeSaved();
   }
-
 }
