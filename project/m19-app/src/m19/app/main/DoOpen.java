@@ -17,7 +17,7 @@ import m19.LibraryManager;
  */
 public class DoOpen extends Command<LibraryManager> {
 
-  Input<String> _filename;
+  private Input<String> _filename;
 
   /**
    * @param receiver
@@ -36,5 +36,4 @@ public class DoOpen extends Command<LibraryManager> {
     } catch(FailedToOpenFileException fnfe) {throw new FileOpenFailedException(fnfe.getName());}
       catch(ClassNotFoundException | IOException e) {e.printStackTrace();}
   }
-
 }

@@ -12,7 +12,7 @@ import m19.LibraryManager;
  */
 public class DoAdvanceDate extends Command<LibraryManager> {
 
-  Input<Integer> _delta;
+  private Input<Integer> _delta;
 
   /**
    * @param receiver

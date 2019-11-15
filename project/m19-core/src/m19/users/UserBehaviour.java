@@ -1,6 +1,8 @@
 package m19.users;
 
-public class UserBehaviour {
+import java.io.Serializable;
+
+public class UserBehaviour implements Serializable {
     //atributes
     private int _maxWorks;
 

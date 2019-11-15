@@ -10,12 +10,16 @@ import java.lang.ClassNotFoundException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import java.io.ObjectOutputStream;
 import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
 import java.io.BufferedInputStream;
+import java.io.ObjectOutputStream;
+import java.io.ObjectInputStream;
+import java.io.FileOutputStream;
 import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.List;
+import m19.users.User;
+
 // FIXME import project (core) types
 
 /**
@@ -62,6 +66,8 @@ public class LibraryManager {
 
     _filename = filename;
     save();
+
+    changeSaved(false);
   }
 
   /**
@@ -75,6 +81,8 @@ public class LibraryManager {
 
     _library = (Library) ois.readObject();
     ois.close();
+
+    changeSaved(false);
   }
 
   /**
@@ -87,6 +95,8 @@ public class LibraryManager {
     } catch (IOException | BadEntrySpecificationException e) {
       throw new ImportFileException(e);
     }
+
+    changeSaved(true);
   }
 
   public String getFilename() {
@@ -101,18 +111,28 @@ public class LibraryManager {
     return _library.getDate();
   }
 
-  public void setDate(int date) { 
-    _library.setDate(date);
-  }
-
   public void advanceDate(int delta) { //input has already been validated
     int newDate = _library.getDate() + delta;
 
     _library.setDate(newDate);
+
+    changeSaved(true);
   }
 
-  public void addUser(String name, String email) throws UserRegistrationFailException {
-    _library.addUser(name, email);
+  public int addUser(String name, String email) throws UserRegistrationFailException {
+    int id = _library.addUser(name, email);
+    changeSaved(true);
 
+    return id;
+  }
+
+  public User displayUser(int id) {
+    return _library.getUser(id);
+  }
+
+  public List<User> getAllUsers() {
+    List<User> list = new ArrayList<User>(_library.getAllUsers().values());
+    
+    return list;
   }
 }

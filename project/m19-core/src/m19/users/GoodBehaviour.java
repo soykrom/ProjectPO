@@ -8,4 +8,8 @@ public class GoodBehaviour extends UserBehaviour {
     public GoodBehaviour() {
         setMaxWorks(MAXWORKS);
     }
+
+    public String toString() {
+        return "Cumpridor";
+    }
 }

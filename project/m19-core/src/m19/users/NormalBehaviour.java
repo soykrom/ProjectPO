@@ -8,4 +8,9 @@ public class NormalBehaviour extends UserBehaviour {
     public NormalBehaviour() {
         setMaxWorks(MAXWORKS);
     }
+
+    @Override
+    public String toString() {
+        return "Normal";
+    }
 }

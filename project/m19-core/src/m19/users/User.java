@@ -1,9 +1,11 @@
 package m19.users;
-import java.util.Map;
+
+import java.io.Serializable;
+import java.util.Comparator;
 import java.util.TreeMap;
+import java.util.Map;
 
-
-public class User {
+public class User implements Serializable {
     //Atributes
     private int _userID;
 
@@ -14,6 +16,17 @@ public class User {
     private boolean _status;
     
     private UserBehaviour _behaviour;
+
+    private int _fine;
+
+    public static final Comparator<User> USER_COMPARATOR = new Comparator<User>() {
+        public int compare(User u1, User u2) {
+          if(!u1.getName().equals(u2.getName()))
+            return u1.getName().compareTo(u2.getName());
+          
+          return (u1.getUserID() - u2.getUserID());
+        }
+    };
     //private requests;
 
     //Methods
@@ -23,6 +36,7 @@ public class User {
         _email = email;
         _status = true;
         _behaviour = new NormalBehaviour();
+        _fine = 0;
     }
 
     public int getUserID() {
@@ -43,5 +57,13 @@ public class User {
 
     public void setStatus(boolean status) {
         _status = status;
+    }
+
+    @Override
+    public String toString() {
+        if(_status)
+            return _userID + " - " + _name + " - " + _email + " - " + _behaviour + " - " + "ATIVO";
+
+        return _userID + " - " + _name + " - " + _email + " - " + _behaviour + " - " + "SUSPENSO - EUR " + _fine;    
     }
 }   

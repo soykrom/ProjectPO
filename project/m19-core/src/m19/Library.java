@@ -72,7 +72,7 @@ public class Library implements Serializable {
         if(line.charAt(0) == '#') continue; //ignores comments
 
         String[] split = line.split(":");
-
+        
         switch(split[0]) {
           case "USER":
             addUser(split[1], split[2]);
@@ -99,12 +99,22 @@ public class Library implements Serializable {
     _date = date;
   }
 
-  public void addUser(String name, String email) throws UserRegistrationFailException {
+  public User getUser(int id) {
+    return _users.get(id);    
+  }
+
+  public Map<Integer, User> getAllUsers() {
+    return _users;
+  }
+  
+  public int addUser(String name, String email) throws UserRegistrationFailException {
     if(name == null || email == null) throw new UserRegistrationFailException();
 
     User newUser = new User(_lastID, name, email);
 
     _users.put(_lastID, newUser);
-    _lastID++;
+
+    return _lastID++;
   }
+
 }

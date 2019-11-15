@@ -13,7 +13,7 @@ import m19.LibraryManager;
  * 4.1.1. Save to file under current name (if unnamed, query for name).
  */
 public class DoSave extends Command<LibraryManager> {
-  Input<String> _filename;
+  private Input<String> _filename;
 
   /**
    * @param receiver

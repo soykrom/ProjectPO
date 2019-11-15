@@ -16,8 +16,8 @@ import m19.LibraryManager;
 public class DoRegisterUser extends Command<LibraryManager> {
 
   // FIXME define input fields
-  Input<String> _name;
-  Input<String> _email;
+  private Input<String> _name;
+  private Input<String> _email;
 
   /**
    * @param receiver
@@ -31,10 +31,14 @@ public class DoRegisterUser extends Command<LibraryManager> {
   /** @see pt.tecnico.po.ui.Command#execute() */
   @Override
   public final void execute() throws DialogException {
+    int id;
+
     _form.parse();
     
     try {
-      _receiver.addUser(_name.value(), _email.value());
+      id = _receiver.addUser(_name.value(), _email.value());
     } catch(UserRegistrationFailException e) {throw new UserRegistrationFailedException(_name.value(), _email.value());}
+    
+    _display.popup(Message.userRegistrationSuccessful(id));
   }
 }

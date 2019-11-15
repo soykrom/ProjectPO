@@ -8,4 +8,8 @@ public class BadBehaviour extends UserBehaviour {
     public BadBehaviour() {
         setMaxWorks(MAXWORKS);
     }
+
+    public String toString() {
+        return "Faltoso";
+    }
 }
