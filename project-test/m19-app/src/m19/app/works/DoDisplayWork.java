@@ -7,8 +7,6 @@ import pt.tecnico.po.ui.Command;
 import pt.tecnico.po.ui.Input;
 import m19.LibraryManager;
 
-// FIXME import core concepts
-// FIXME import ui concepts
 
 /**
  * 4.3.1. Display work.

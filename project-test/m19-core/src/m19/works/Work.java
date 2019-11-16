@@ -64,7 +64,7 @@ public abstract class Work implements Serializable {
     }
 
     @Override 
-    public String toString(){
-        return _workID + " - " + _libraryCopies + " de " + _totalCopies;
+    public String toString() {
+        return _workID + " - " + _libraryCopies + " de " + _totalCopies + " - " + "%s - " + getWorkID() + " - " + getPrice() + " - " + getCategory().getDisplayed() + " - ";
     }
 }

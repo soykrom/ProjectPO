@@ -1,6 +1,5 @@
 package m19;
 
-// FIXME import system types
 import m19.exceptions.MissingFileAssociationException;
 import m19.exceptions.BadEntrySpecificationException;
 import m19.exceptions.UserRegistrationFailException;
@@ -25,7 +24,6 @@ import m19.works.Book;
 import m19.works.DVD;
 import java.util.Map;
 
-// FIXME import project (core) types
 
 /**
  * Class that represents the library as a whole.
@@ -35,7 +33,6 @@ public class Library implements Serializable {
   /** Serial number for serialization. */
   private static final long serialVersionUID = 201901101348L;
 
-  // FIXME define attributes
   private int _date;
 
   private int _lastUserID;
@@ -46,7 +43,6 @@ public class Library implements Serializable {
 
   private Map<Integer, Work> _works;
 
-  // FIXME define contructor(s)
   public Library() {
     _date = 0;
     _lastUserID = 0;
@@ -54,7 +50,6 @@ public class Library implements Serializable {
     _lastWorkID = 0;
     _works = new TreeMap<Integer, Work>();
   }
-  // FIXME define methods
 
   /**
    * Read the text input file at the beginning of the program and populates the

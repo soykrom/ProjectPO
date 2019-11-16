@@ -6,8 +6,6 @@ import m19.LibraryManager;
 import m19.users.User;
 import java.util.List;
 
-// FIXME import core concepts
-// FIXME import ui concepts
 
 /**
  * 4.2.4. Show all users.

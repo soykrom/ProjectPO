@@ -21,6 +21,8 @@ public class DVD extends Work {
 
     @Override
     public String toString() {
-        return super.toString() + " - " + "DVD - " + getWorkID() + " - " + getPrice() + " - " + getCategory().getDisplayed() + " - " + _producer + " - " + _IGAC; 
+        String str = String.format(super.toString(), "DVD");
+
+        return str + _producer + " - " + _IGAC; 
     }
 }

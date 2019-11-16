@@ -20,6 +20,8 @@ public class Book extends Work {
 
     @Override
     public String toString() {
-        return super.toString() + " - " + "BOOK - " + getWorkID() + " - " + getPrice() + " - " + getCategory().getDisplayed() + " - " + _author + " - " + _ISBN; 
+        String str = String.format(super.toString(), "BOOK");
+
+        return str + _author + " - " + _ISBN; 
     }
 }

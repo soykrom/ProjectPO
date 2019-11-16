@@ -6,8 +6,6 @@ import pt.tecnico.po.ui.DialogException;
 import pt.tecnico.po.ui.Command;
 import pt.tecnico.po.ui.Input;
 import m19.LibraryManager;
-// FIXME import core concepts
-// FIXME import ui concepts
 
 /**
  * 4.2.2. Show specific user.

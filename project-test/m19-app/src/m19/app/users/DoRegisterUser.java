@@ -7,15 +7,12 @@ import pt.tecnico.po.ui.DialogException;
 import pt.tecnico.po.ui.Command;
 import pt.tecnico.po.ui.Input;
 import m19.LibraryManager;
-// FIXME import core concepts
-// FIXME import ui concepts
 
 /**
  * 4.2.1. Register new user.
  */
 public class DoRegisterUser extends Command<LibraryManager> {
 
-  // FIXME define input fields
   private Input<String> _name;
   private Input<String> _email;
 

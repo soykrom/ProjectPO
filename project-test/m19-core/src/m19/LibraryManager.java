@@ -23,7 +23,6 @@ import java.util.List;
 import m19.users.User;
 import m19.works.Work;
 
-// FIXME import project (core) types
 
 /**
  * The façade class.
@@ -34,7 +33,6 @@ public class LibraryManager {
   private boolean _saveStatus; //Controls if there has been any changes
   private Library _library;
 
-  // FIXME define contructor(s)
   public LibraryManager() {
     _saveStatus = false;
     _filename = "";
@@ -45,7 +43,6 @@ public class LibraryManager {
     _filename = filename;
     _library = new Library();
   }
-  // FIXME define methods
 
   /**
    * @throws MissingFileAssociationException
