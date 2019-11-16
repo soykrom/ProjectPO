@@ -33,16 +33,26 @@ public class Library implements Serializable {
   /** Serial number for serialization. */
   private static final long serialVersionUID = 201901101348L;
 
+  /**  Current date */
   private int _date;
 
+  /** Last user's ID number */
   private int _lastUserID;
 
+  /** Last work's ID number */
   private int _lastWorkID;
 
+  /** Mapping between ID number and its correspondent user */
   private Map<Integer, User> _users;
 
+  /** Mapping between ID number and its correspondent work */
   private Map<Integer, Work> _works;
 
+   /**
+   * Constructor.
+   *
+   * initializes parameters _date, _lastUserID and _lastWorkID at 0
+   */       
   public Library() {
     _date = 0;
     _lastUserID = 0;
@@ -56,12 +66,13 @@ public class Library implements Serializable {
    * instances of the various possible types (books, DVDs, users).
    * 
    * @param filename
-   *          name of the file to load
+   *          name of the file to load.
    * @throws BadEntrySpecificationException
    * @throws IOException
+   * @throws UserRegistrationFailException
    */
 
-  void importFile(String filename) throws BadEntrySpecificationException, IOException {
+  void importFile(String filename) throws BadEntrySpecificationException, IOException, UserRegistrationFailException {
     int nLine = 0;
 
     try {
@@ -94,27 +105,58 @@ public class Library implements Serializable {
 
       rdIn.close();
     } catch(BadEntrySpecificationException e) {e.printStackTrace();}
+      catch(IOException e) {e.printStackTrace();} 
       catch(UserRegistrationFailException e) {e.printStackTrace();}
   }
 
+  /** 
+   * @return the current date.
+   */
   public int getDate() {
     return _date;
   }
-
+  
+  /**
+   * @param date
+   *          the current date.
+   */
   public void setDate(int date) {
     _date = date;
   }
 
+  /**
+   * @param id
+   *          user's ID number.
+   *     
+   * @throws UserNotFoundException
+   * 
+   * @return the user correspondent to the given ID number.
+   */
   public User getUser(int id) throws UserNotFoundException {
     if(id > _users.size() - 1) throw new UserNotFoundException();
 
     return _users.get(id);    
   }
 
+  /** 
+   * Return all the ID numbers and the correspondent users.
+   * 
+   * @return a map between ID number and its correspondent user.
+   */
   public Map<Integer, User> getAllUsers() {
     return _users;
   }
   
+  /**
+   * @param name
+   *          user's name.
+   * @param email
+   *          user's email.
+   * 
+   * @throws UserRegistrationFailException
+   * 
+   * @return new user's ID number.
+   */
   public int addUser(String name, String email) throws UserRegistrationFailException {
     if(name == null || email == null) throw new UserRegistrationFailException();
 
@@ -125,12 +167,40 @@ public class Library implements Serializable {
     return _lastUserID++;
   }
 
+  /**
+   * @param id 
+   *          user's ID number.
+   * 
+   * @throws WorkNotFoundException
+   * 
+   * @return work correspondent to the given ID number.
+   */
   public Work getWork(int id) throws WorkNotFoundException {
     if(id > _works.size() - 1) throw new WorkNotFoundException();
 
     return _works.get(id);
   }
 
+  /**
+   * Create and register DVD.
+   * 
+   * Incrementation of ID number.
+   * 
+   * @param title 
+   *          new DVD's title.
+   * @param producer
+   *          new DVD's producer.
+   * @param price
+   *          new DVD's price.
+   * @param category
+   *          new DVD's category.
+   * @param IGAC
+   *          new DVD's IGAC.
+   * @param copies
+   *          new DVD's number of copies
+   * 
+   * @return ID number correspondent to the recently added Work.
+   */
   public int addDVD(String title, String producer, int price, String category, String IGAC, int copies) {
     DVD newDVD = new DVD(_lastWorkID, title, producer, price, category, IGAC, copies);
 
@@ -139,6 +209,26 @@ public class Library implements Serializable {
     return _lastWorkID++;
   }
 
+  /**
+   * Create and register Book.
+   * 
+   * Incrementation of ID number.
+   * 
+   * @param title 
+   *          new Book's title.
+   * @param producer
+   *          new Book's author.
+   * @param price
+   *          new Book's price.
+   * @param category
+   *          new Book's category.
+   * @param IGAC
+   *          new Book's ISBN.
+   * @param copies
+   *          new Book's number of copies
+   * 
+   * @return ID number correspondent to the recently added Book.
+   */
   public int addBook(String title, String author, int price, String category, String ISBN, int copies) {
     Book newBook = new Book(_lastWorkID, title, author, price, category, ISBN, copies);
 
@@ -147,6 +237,11 @@ public class Library implements Serializable {
     return _lastWorkID++;
   }
 
+  /** 
+   * Return all the ID numbers and the correspondent works.
+   * 
+   * @return a map between ID number and its correspondent work.
+   */
   public Map<Integer, Work> getAllWorks() {
     return _works;
   }
