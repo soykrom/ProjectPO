@@ -1,29 +1,40 @@
 package m19.app.works;
 
+import pt.tecnico.po.ui.DialogException;
 import pt.tecnico.po.ui.Command;
+import pt.tecnico.po.ui.Input;
 import m19.LibraryManager;
-// FIXME import core concepts
-// FIXME import ui concepts
+import m19.works.Work;
+import java.util.List;
 
 /**
  * 4.3.3. Perform search according to miscellaneous criteria.
  */
 public class DoPerformSearch extends Command<LibraryManager> {
 
-  // FIXME define input fields
+  private Input<String> _term;
 
   /**
    * @param m
    */
   public DoPerformSearch(LibraryManager m) {
     super(Label.PERFORM_SEARCH, m);
-    // FIXME initialize input fields
+    _term = _form.addStringInput(Message.requestSearchTerm());
   }
 
   /** @see pt.tecnico.po.ui.Command#execute() */
   @Override
   public final void execute() {
-    // FIXME implement command
+    _form.parse();
+
+    /*
+    List<Work> works = _receiver.searchWork(_term.value());
+
+    for(Work work: works)
+      _display.addLine(work.toString());
+
+    _display.display();
+    */
   }
   
 }
