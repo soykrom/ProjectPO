@@ -10,6 +10,6 @@ public class BadBehaviour extends UserBehaviour {
     }
 
     public String toString() {
-        return "Faltoso";
+        return "FALTOSO";
     }
 }

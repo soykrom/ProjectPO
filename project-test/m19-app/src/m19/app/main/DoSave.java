@@ -21,19 +21,19 @@ public class DoSave extends Command<LibraryManager> {
   public DoSave(LibraryManager receiver) {
     super(Label.SAVE, receiver);
 
-    if(receiver.getFilename().equals("")) 
-      _filename = _form.addStringInput(Message.newSaveAs());  
-    else
-      _filename = _form.addStringInput(Message.saveAs());
+    _filename = _form.addStringInput(Message.newSaveAs());  
   }
 
   /** @see pt.tecnico.po.ui.Command#execute() */
   @Override
-  public final void execute() {
-    _form.parse();
-    
+  public final void execute() {    
     try {
-      _receiver.saveAs(_filename.value());
+      if(_receiver.getFilename().isEmpty()) {
+        _form.parse();
+        _receiver.saveAs(_filename.value());
+      } else {
+        _receiver.save();
+      }
     } catch(MissingFileAssociationException e) {e.printStackTrace();}
       catch(IOException e) {e.printStackTrace();}
   }

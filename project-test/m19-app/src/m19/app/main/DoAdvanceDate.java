@@ -30,7 +30,6 @@ public class DoAdvanceDate extends Command<LibraryManager> {
     if(_delta.value() <= 0) return; //Exits if amount inputed isn't positive
 
     _receiver.advanceDate(_delta.value());
-    _display.popup(Message.currentDate(_receiver.getDate()));
     //requestHandler();
     //notificationHandler();
   }

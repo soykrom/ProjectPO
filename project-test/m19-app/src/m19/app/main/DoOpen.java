@@ -9,9 +9,6 @@ import pt.tecnico.po.ui.Command;
 import pt.tecnico.po.ui.Input;
 import m19.LibraryManager;
 
-// FIXME import core concepts
-// FIXME import ui concepts
-
 /**
  * 4.1.1. Open existing document.
  */
@@ -31,6 +28,7 @@ public class DoOpen extends Command<LibraryManager> {
   @Override
   public final void execute() throws DialogException {
     _form.parse();
+    
     try {
       _receiver.load(_filename.value());
     } catch(FailedToOpenFileException fnfe) {throw new FileOpenFailedException(fnfe.getName());}

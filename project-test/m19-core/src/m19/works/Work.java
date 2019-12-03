@@ -11,10 +11,10 @@ public abstract class Work implements Serializable {
     private int _libraryCopies;
     private Category _category;
 
-    enum Category {
+    public enum Category {
         FICTION(true, "Ficção"),
         REFERENCE(false, "Referência"),
-        SCITECH(true, "Técnico e Científica");
+        SCITECH(true, "Técnica e Científica");
 
         private boolean _requestable;
         private String _displayed;
@@ -65,6 +65,6 @@ public abstract class Work implements Serializable {
 
     @Override 
     public String toString() {
-        return _workID + " - " + _libraryCopies + " de " + _totalCopies + " - " + "%s - " + getWorkID() + " - " + getPrice() + " - " + getCategory().getDisplayed() + " - ";
+        return _workID + " - " + _libraryCopies + " de " + _totalCopies + " - " + "%s - " + _title + " - " + _price + " - " + getCategory().getDisplayed() + " - ";
     }
 }

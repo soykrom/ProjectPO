@@ -69,10 +69,9 @@ public class Library implements Serializable {
    *          name of the file to load.
    * @throws BadEntrySpecificationException
    * @throws IOException
-   * @throws UserRegistrationFailException
    */
 
-  void importFile(String filename) throws BadEntrySpecificationException, IOException, UserRegistrationFailException {
+  void importFile(String filename) throws BadEntrySpecificationException, IOException {
     int nLine = 0;
 
     try {
@@ -158,7 +157,7 @@ public class Library implements Serializable {
    * @return new user's ID number.
    */
   public int addUser(String name, String email) throws UserRegistrationFailException {
-    if(name == null || email == null) throw new UserRegistrationFailException();
+    if(name.isEmpty() || email.isEmpty()) throw new UserRegistrationFailException();
 
     User newUser = new User(_lastUserID, name, email);
 
@@ -198,15 +197,13 @@ public class Library implements Serializable {
    *          new DVD's IGAC.
    * @param copies
    *          new DVD's number of copies
-   * 
-   * @return ID number correspondent to the recently added Work.
    */
-  public int addDVD(String title, String producer, int price, String category, String IGAC, int copies) {
+  public void addDVD(String title, String producer, int price, String category, String IGAC, int copies) {
     DVD newDVD = new DVD(_lastWorkID, title, producer, price, category, IGAC, copies);
 
     _works.put(_lastWorkID, newDVD);
 
-    return _lastWorkID++;
+    _lastWorkID++;
   }
 
   /**
@@ -226,15 +223,13 @@ public class Library implements Serializable {
    *          new Book's ISBN.
    * @param copies
    *          new Book's number of copies
-   * 
-   * @return ID number correspondent to the recently added Book.
    */
-  public int addBook(String title, String author, int price, String category, String ISBN, int copies) {
+  public void addBook(String title, String author, int price, String category, String ISBN, int copies) {
     Book newBook = new Book(_lastWorkID, title, author, price, category, ISBN, copies);
 
     _works.put(_lastWorkID, newBook);
 
-    return _lastWorkID++;
+    _lastWorkID++;
   }
 
   /** 

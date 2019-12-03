@@ -20,7 +20,7 @@ public class Book extends Work {
 
     @Override
     public String toString() {
-        String str = String.format(super.toString(), "BOOK");
+        String str = String.format(super.toString(), "Livro");
 
         return str + _author + " - " + _ISBN; 
     }

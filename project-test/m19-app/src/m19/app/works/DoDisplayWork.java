@@ -28,6 +28,8 @@ public class DoDisplayWork extends Command<LibraryManager> {
     _form.parse();
 
     try {
+      if(_id.value() < 0) throw new WorkNotFoundException();
+
       _display.popup(_receiver.displayWork(_id.value()).toString());
     } catch(WorkNotFoundException e) {throw new NoSuchWorkException(_id.value());}
   }

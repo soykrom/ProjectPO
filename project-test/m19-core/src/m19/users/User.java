@@ -33,7 +33,6 @@ public class User implements Serializable {
             return (u2.getUserID() - u1.getUserID());
         }
     };
-    //private requests;
 
     //Methods
     public User(int id, String name, String email) {
@@ -68,7 +67,7 @@ public class User implements Serializable {
     @Override
     public String toString() {
         if(_status)
-            return _userID + " - " + _name + " - " + _email + " - " + _behaviour + " - " + "ATIVO";
+            return _userID + " - " + _name + " - " + _email + " - " + _behaviour + " - " + "ACTIVO";
 
         return _userID + " - " + _name + " - " + _email + " - " + _behaviour + " - " + "SUSPENSO - EUR " + _fine;    
     }

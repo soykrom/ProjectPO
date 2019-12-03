@@ -11,6 +11,6 @@ public class NormalBehaviour extends UserBehaviour {
 
     @Override
     public String toString() {
-        return "Normal";
+        return "NORMAL";
     }
 }

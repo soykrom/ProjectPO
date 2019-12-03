@@ -10,6 +10,6 @@ public class GoodBehaviour extends UserBehaviour {
     }
 
     public String toString() {
-        return "Cumpridor";
+        return "CUMPRIDOR";
     }
 }

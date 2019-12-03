@@ -77,10 +77,14 @@ public class LibraryManager {
    * @throws ClassNotFoundException
    */
   public void load(String filename) throws FailedToOpenFileException, IOException, ClassNotFoundException {
-    ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new FileInputStream(filename)));
+    try {
+      ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new FileInputStream(filename)));
+      
+      _library = (Library) ois.readObject();
+      ois.close();
+    } catch(IOException e) {throw new FailedToOpenFileException(filename);}
 
-    _library = (Library) ois.readObject();
-    ois.close();
+    _filename = filename;
 
     changeSaved(false);
   }
@@ -97,7 +101,7 @@ public class LibraryManager {
     }
 
     changeSaved(true);
-  }
+  } 
 
   public String getFilename() {
     return _filename;
