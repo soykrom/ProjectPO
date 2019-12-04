@@ -1,0 +1,87 @@
+*** tests/A-07-09-M-ok.out	2019-11-20 15:11:31.000000001 +0000
+--- tests/A-07-09-M-ok.outhyp	2019-12-04 14:11:28.000000001 +0000
+***************
+*** 7,13 ****
+  6 - Menu de gestão de obras
+  7 - Menu de gestão de requisições
+  0 - Sair
+! Escolha uma opção: Ficheiro a abrir: Menu Principal
+  1 - Abrir dados
+  2 - Guardar dados
+  3 - Ver data
+--- 7,14 ----
+  6 - Menu de gestão de obras
+  7 - Menu de gestão de requisições
+  0 - Sair
+! Escolha uma opção: Ficheiro a abrir: Abrir dados: Operação inválida: O ficheiro 'requisicao' não existe.
+! Menu Principal
+  1 - Abrir dados
+  2 - Guardar dados
+  3 - Ver data
+***************
+*** 20,35 ****
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Devolver obra: Operação inválida: A obra 7 não foi requisitada pelo utente 1.
+! Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+--- 21,68 ----
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
+! 0 - Sair
+! Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
+  0 - Sair
+! Escolha uma opção: Ficheiro a abrir: Abrir dados: Operação inválida: O ficheiro '7' não existe.
+! Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
+! 0 - Sair
+! Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
+! 0 - Sair
+! Escolha uma opção: Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
