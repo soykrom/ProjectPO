@@ -20,6 +20,11 @@ public class DVD extends Work {
     }
 
     @Override
+    public boolean searchFields(String term) {
+        return _producer.toLowerCase().contains(term);
+    }
+
+    @Override
     public String toString() {
         String str = String.format(super.toString(), "DVD");
 

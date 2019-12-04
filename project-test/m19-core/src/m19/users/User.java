@@ -30,7 +30,7 @@ public class User implements Serializable {
             if(!u1.getName().equals(u2.getName()))
                 return collator.compare(u1.getName(), u2.getName());
             
-            return (u2.getUserID() - u1.getUserID());
+            return (u1.getUserID() - u2.getUserID());
         }
     };
 

@@ -63,6 +63,12 @@ public abstract class Work implements Serializable {
         return _category;
     }
 
+    public boolean searchTitle(String term) {
+        return _title.toLowerCase().contains(term);
+    }
+
+    public abstract boolean searchFields(String term);
+
     @Override 
     public String toString() {
         return _workID + " - " + _libraryCopies + " de " + _totalCopies + " - " + "%s - " + _title + " - " + _price + " - " + getCategory().getDisplayed() + " - ";

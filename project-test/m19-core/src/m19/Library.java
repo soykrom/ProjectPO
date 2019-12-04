@@ -15,15 +15,18 @@ import java.io.BufferedInputStream;
 import java.io.ObjectInputStream;
 import java.io.FileInputStream;
 import java.io.BufferedReader;
+import java.util.Collections;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.io.FileReader;
+
 import java.util.TreeMap;
+import java.util.List;
 import m19.users.User;
 import m19.works.Work;
 import m19.works.Book;
 import m19.works.DVD;
 import java.util.Map;
-
 
 /**
  * Class that represents the library as a whole.
@@ -124,6 +127,16 @@ public class Library implements Serializable {
   }
 
   /**
+   * @param delta
+   *  the number of days to advance
+   */
+  public void advanceDate(int delta) {
+    if(delta <= 0) return;
+
+    _date += delta;
+  }
+
+  /**
    * @param id
    *          user's ID number.
    *     
@@ -138,12 +151,15 @@ public class Library implements Serializable {
   }
 
   /** 
-   * Return all the ID numbers and the correspondent users.
+   * Return all users.
    * 
-   * @return a map between ID number and its correspondent user.
+   * @return a list of all users.
    */
-  public Map<Integer, User> getAllUsers() {
-    return _users;
+  public List<User> getAllUsers() {
+    List<User> list = new ArrayList<User>(_users.values());
+
+    Collections.sort(list, User.USER_COMPARATOR);
+    return list;
   }
   
   /**
@@ -157,8 +173,7 @@ public class Library implements Serializable {
    * @return new user's ID number.
    */
   public int addUser(String name, String email) throws UserRegistrationFailException {
-    if(name.isEmpty() || email.isEmpty()) throw new UserRegistrationFailException();
-
+    if(name == null || email == null) throw new UserRegistrationFailException();
     User newUser = new User(_lastUserID, name, email);
 
     _users.put(_lastUserID, newUser);
@@ -233,12 +248,48 @@ public class Library implements Serializable {
   }
 
   /** 
-   * Return all the ID numbers and the correspondent works.
+   * Return all  works.
    * 
-   * @return a map between ID number and its correspondent work.
+   * @return a list of all works.
    */
-  public Map<Integer, Work> getAllWorks() {
-    return _works;
+  public List<Work> getAllWorks() {
+    List<Work> list = new ArrayList<Work>(_works.values());
+
+    return list;
   }
 
+  /**
+   * Return the list containing all the works that have the search term
+   * 
+   * @param term
+   *          Search term
+   * 
+   * @return a list of all works that have the search term in the specified atributes.
+   */
+  public List<Work> performSearch(String term) {
+    List<Work> list = new ArrayList<Work>();
+
+    for(Work work : _works.values()) {
+      if(searchWork(work, term.toLowerCase())) {
+        list.add(work);
+      }
+    }
+
+    return list;
+  }
+
+  /**
+   * Checks if work has search term in specific fields
+   * 
+   * @param work
+   *          work to be checked
+   * 
+   * @param term
+   *          Search term
+   * 
+   * @return a boolean according to the search result
+   */
+  public boolean searchWork(Work work, String term) {
+    return work.searchTitle(term) || work.searchFields(term);
+  }
 }

@@ -19,6 +19,11 @@ public class Book extends Work {
     }
 
     @Override
+    public boolean searchFields(String term) {
+        return _author.toLowerCase().contains(term);
+    }
+
+    @Override
     public String toString() {
         String str = String.format(super.toString(), "Livro");
 

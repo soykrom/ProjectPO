@@ -23,8 +23,6 @@ public class DoShowUsers extends Command<LibraryManager> {
   public final void execute() {
     List<User> users = _receiver.getAllUsers();
 
-    Collections.sort(users, User.USER_COMPARATOR);
-
     for(User user : users)      
       _display.addLine(user.toString());
 

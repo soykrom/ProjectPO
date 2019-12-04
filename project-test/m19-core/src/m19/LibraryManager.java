@@ -116,28 +116,23 @@ public class LibraryManager {
   }
 
   public void advanceDate(int delta) { //input has already been validated
-    int newDate = _library.getDate() + delta;
-
-    _library.setDate(newDate);
+    _library.advanceDate(delta);
 
     changeSaved(true);
   }
 
   public int addUser(String name, String email) throws UserRegistrationFailException {
-    int id = _library.addUser(name, email);
     changeSaved(true);
 
-    return id;
+    return _library.addUser(name, email);
   }
 
   public User displayUser(int id) throws UserNotFoundException {
     return _library.getUser(id);
   }
 
-  public List<User> getAllUsers() {
-    List<User> list = new ArrayList<User>(_library.getAllUsers().values());
-    
-    return list;
+  public List<User> getAllUsers() {    
+    return _library.getAllUsers();
   }
 
   public Work displayWork(int id) throws WorkNotFoundException {
@@ -145,8 +140,10 @@ public class LibraryManager {
   }
 
   public List<Work> getAllWorks() {
-    List<Work> list = new ArrayList<Work>(_library.getAllWorks().values());
+    return _library.getAllWorks();
+  }
 
-    return list;
+  public List<Work> performSearch(String term) {
+    return _library.performSearch(term);
   }
 }

@@ -27,14 +27,13 @@ public class DoPerformSearch extends Command<LibraryManager> {
   public final void execute() {
     _form.parse();
 
-    /*
-    List<Work> works = _receiver.searchWork(_term.value());
+    List<Work> works = _receiver.performSearch(_term.value());
 
     for(Work work: works)
       _display.addLine(work.toString());
 
     _display.display();
-    */
+    
   }
   
 }
