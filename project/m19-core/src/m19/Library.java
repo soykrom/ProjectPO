@@ -3,6 +3,8 @@ package m19;
 import m19.exceptions.MissingFileAssociationException;
 import m19.exceptions.BadEntrySpecificationException;
 import m19.exceptions.UserRegistrationFailException;
+import m19.exceptions.RuleUnsuccessfulException;
+import m19.exceptions.RuleUnsuccessfulException;
 import m19.exceptions.FailedToOpenFileException;
 import m19.exceptions.UserNotFoundException;
 import m19.exceptions.WorkNotFoundException;
@@ -11,15 +13,16 @@ import java.lang.ClassNotFoundException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import m19.rules.OneRuleToRuleThemAll;
 import java.io.BufferedInputStream;
 import java.io.ObjectInputStream;
 import java.io.FileInputStream;
 import java.io.BufferedReader;
 import java.util.Collections;
 import java.io.Serializable;
+import m19.requests.Request;
 import java.util.ArrayList;
 import java.io.FileReader;
-
 import java.util.TreeMap;
 import java.util.List;
 import m19.users.User;
@@ -173,7 +176,7 @@ public class Library implements Serializable {
    * @return new user's ID number.
    */
   public int addUser(String name, String email) throws UserRegistrationFailException {
-    if(name == null || email == null) throw new UserRegistrationFailException();
+    if(name.isEmpty() || email.isEmpty()) throw new UserRegistrationFailException();
     User newUser = new User(_lastUserID, name, email);
 
     _users.put(_lastUserID, newUser);
@@ -291,5 +294,16 @@ public class Library implements Serializable {
    */
   public boolean searchWork(Work work, String term) {
     return work.searchTitle(term) || work.searchFields(term);
+  }
+
+  public void requestWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, RuleUnsuccessfulException {
+    User user = getUser(userID);
+    Work work = getWork(workID);
+
+    Request request = new Request(user, work);
+    //void to be changed to int, number of days to deadline
+
+    (new OneRuleToRuleThemAll(request)).validateAll();
+
   }
 }

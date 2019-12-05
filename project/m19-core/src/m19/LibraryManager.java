@@ -1,10 +1,10 @@
 package m19;
 
-// FIXME import system types?
 import m19.exceptions.MissingFileAssociationException;
 import m19.exceptions.BadEntrySpecificationException;
 import m19.exceptions.UserRegistrationFailException;
 import m19.exceptions.FailedToOpenFileException;
+import m19.exceptions.RuleUnsuccessfulException;
 import m19.exceptions.UserNotFoundException;
 import m19.exceptions.WorkNotFoundException;
 import m19.exceptions.ImportFileException;
@@ -50,6 +50,8 @@ public class LibraryManager {
    * @throws FileNotFoundException
    */
   public void save() throws MissingFileAssociationException, IOException {
+    if(_filename.isEmpty()) throw new MissingFileAssociationException();
+
     ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(_filename)));
 
     oos.writeObject(_library);
@@ -145,5 +147,10 @@ public class LibraryManager {
 
   public List<Work> performSearch(String term) {
     return _library.performSearch(term);
+  }
+
+  public void requestWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, RuleUnsuccessfulException {
+    //void to be changed to int, number of days to deadline
+    _library.requestWork(userID, workID);
   }
 }

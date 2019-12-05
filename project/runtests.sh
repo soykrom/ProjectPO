@@ -1,9 +1,9 @@
 #!/bin/bash
-
+#export CVSROOT=:ext:ist192494@sigma.ist.utl.pt:/afs/ist.utl.pt/groups/leic-po/po19/cvs/080
 let total=0;
 let correct=0;
 export CLASSPATH=./m19-app/m19-app.jar:./m19-core/m19-core.jar:./po-uuilib/po-uuilib.jar:.
-for x in tests/*.in; do
+for x in tests-ei/*.in; do
     if [ -e ${x%.in}.import ]; then
         java -Dimport=${x%.in}.import -Din=$x -Dout=${x%.in}.outhyp m19.app.App;
     else
