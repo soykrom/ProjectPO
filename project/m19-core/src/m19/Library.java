@@ -303,7 +303,7 @@ public class Library implements Serializable {
     Request request = new Request(user, work);
     //void to be changed to int, number of days to deadline
 
-    (new OneRuleToRuleThemAll(request)).validateAll();
+    (new OneRuleToRuleThemAll(request)).validate();
 
   }
 }

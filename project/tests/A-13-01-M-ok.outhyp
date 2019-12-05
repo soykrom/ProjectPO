@@ -7,7 +7,8 @@ Menu Principal
 6 - Menu de gestão de obras
 7 - Menu de gestão de requisições
 0 - Sair
-Escolha uma opção: Ficheiro a abrir: Menu Principal
+Escolha uma opção: Ficheiro a abrir: Abrir dados: Operação inválida: O ficheiro 'faltoso' não existe.
+Menu Principal
 1 - Abrir dados
 2 - Guardar dados
 3 - Ver data
@@ -20,27 +21,13 @@ Escolha uma opção: Menu de Gestão de Requisições
 1 - Requisitar obra
 2 - Devolver obra
 0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
+Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 1 não existe.
+Menu de Gestão de Requisições
 1 - Requisitar obra
 2 - Devolver obra
 0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
-1 - Requisitar obra
-2 - Devolver obra
-0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
-1 - Requisitar obra
-2 - Devolver obra
-0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
-1 - Requisitar obra
-2 - Devolver obra
-0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
-1 - Requisitar obra
-2 - Devolver obra
-0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
+Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 2 não existe.
+Menu de Gestão de Requisições
 1 - Requisitar obra
 2 - Devolver obra
 0 - Sair
@@ -53,7 +40,7 @@ Escolha uma opção: Menu Principal
 6 - Menu de gestão de obras
 7 - Menu de gestão de requisições
 0 - Sair
-Escolha uma opção: Data actual: 20
+Escolha uma opção: Data actual: 0
 Menu Principal
 1 - Abrir dados
 2 - Guardar dados
@@ -80,16 +67,8 @@ Escolha uma opção: Menu de Gestão de Requisições
 1 - Requisitar obra
 2 - Devolver obra
 0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
-1 - Requisitar obra
-2 - Devolver obra
-0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
-1 - Requisitar obra
-2 - Devolver obra
-0 - Sair
-Escolha uma opção: Número inválido!
-Escolha uma opção: Menu de Gestão de Requisições
+Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 1 não existe.
+Menu de Gestão de Requisições
 1 - Requisitar obra
 2 - Devolver obra
 0 - Sair
@@ -118,10 +97,7 @@ Escolha uma opção: Menu de Gestão de Utentes
 4 - Mostrar notificações de utente
 5 - Saldar multa de utente
 0 - Sair
-Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
-1 - Darth Vader - darth@dark.force.coAm - NORMAL - ACTIVO
-2 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
-Menu de Gestão de Utentes
+Escolha uma opção: Menu de Gestão de Utentes
 1 - Registar utente
 2 - Mostrar utente
 3 - Listar utentes
@@ -135,7 +111,7 @@ Escolha uma opção: Menu de Gestão de Utentes
 4 - Mostrar notificações de utente
 5 - Saldar multa de utente
 0 - Sair
-Escolha uma opção: Introduza o nome do utente: Introduza o endereço de correio do utente: Novo utente criado com o número 3.
+Escolha uma opção: Introduza o nome do utente: Introduza o endereço de correio do utente: Novo utente criado com o número 0.
 Menu de Gestão de Utentes
 1 - Registar utente
 2 - Mostrar utente
@@ -143,7 +119,7 @@ Menu de Gestão de Utentes
 4 - Mostrar notificações de utente
 5 - Saldar multa de utente
 0 - Sair
-Escolha uma opção: Introduza o número de utente: 3 - 3 - 5 - NORMAL - ACTIVO
+Escolha uma opção: Introduza o número de utente: Mostrar utente: Operação inválida: O utente 3 não existe.
 Menu de Gestão de Utentes
 1 - Registar utente
 2 - Mostrar utente

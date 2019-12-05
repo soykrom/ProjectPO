@@ -1,10 +1,13 @@
 package m19.users;
 
+import m19.requests.Request;
 import java.io.Serializable;
 import java.util.Comparator;
+import java.util.ArrayList;
 import java.text.Collator;
 import java.util.TreeMap;
 import java.util.Locale;
+import java.util.List;
 import java.util.Map;
 
 public class User implements Serializable {
@@ -20,6 +23,8 @@ public class User implements Serializable {
     private UserBehaviour _behaviour;
 
     private int _fine;
+
+    private List<Request> _requests;
 
     public static final Comparator<User> USER_COMPARATOR = new Comparator<User>() {
         public int compare(User u1, User u2) {
@@ -42,6 +47,7 @@ public class User implements Serializable {
         _status = true;
         _behaviour = new NormalBehaviour();
         _fine = 0;
+        _requests = new ArrayList<Request>();
     }
 
     public int getUserID() {
@@ -56,6 +62,22 @@ public class User implements Serializable {
         return _email;
     }
 
+    public UserBehaviour getBehaviour() {
+        return _behaviour;
+    }
+    
+    public int getMaxWorks() {
+        return _behaviour.getMaxWorks();
+    }
+
+    public List<Request> getRequests() {
+        return _requests;
+    }
+
+    public int getNumberRequests() {
+        return _requests.size();
+    }
+    
     public boolean getStatus() {
         return _status;
     }

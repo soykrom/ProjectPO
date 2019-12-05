@@ -1,12 +1,7 @@
 *** tests/A-11-02-M-ok.out	2019-11-20 15:13:04.000000001 +0000
---- tests/A-11-02-M-ok.outhyp	2019-12-04 15:17:47.000000001 +0000
+--- tests/A-11-02-M-ok.outhyp	2019-12-05 10:57:34.000000001 +0000
 ***************
-*** 11,26 ****
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 4 não existe.
-  Menu de Gestão de Requisições
+*** 16,22 ****
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
@@ -14,40 +9,11 @@
   Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
-  0 - Sair
-  Escolha uma opção: Menu Principal
-  1 - Abrir dados
-  2 - Guardar dados
---- 11,42 ----
+--- 16,22 ----
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Opção inválida!
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 2 deve ser devolvida no dia 0.
   Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Opção inválida!
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-+ Escolha uma opção: Menu de Gestão de Requisições
-+ 1 - Requisitar obra
-+ 2 - Devolver obra
-+ 0 - Sair
-  Escolha uma opção: Menu Principal
-  1 - Abrir dados
-  2 - Guardar dados

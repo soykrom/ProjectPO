@@ -1,12 +1,12 @@
 *** tests/A-07-10-M-ok.out	2019-11-20 15:11:31.000000001 +0000
---- tests/A-07-10-M-ok.outhyp	2019-12-04 15:17:43.000000001 +0000
+--- tests/A-07-10-M-ok.outhyp	2019-12-05 10:57:28.000000001 +0000
 ***************
-*** 11,45 ****
+*** 11,89 ****
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 7 deve ser devolvida no dia 3.
-! Menu de Gestão de Requisições
+  Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
@@ -20,12 +20,12 @@
   2 - Devolver obra
   0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
-! Menu de Gestão de Requisições
+  Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
-! Menu de Gestão de Requisições
+  Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
@@ -37,27 +37,6 @@
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
---- 11,60 ----
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Opção inválida!
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
 ! Escolha uma opção: Menu Principal
 ! 1 - Abrir dados
 ! 2 - Guardar dados
@@ -66,88 +45,25 @@
 ! 5 - Menu de gestão de utentes
 ! 6 - Menu de gestão de obras
 ! 7 - Menu de gestão de requisições
-! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
   0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-***************
-*** 52,57 ****
---- 67,81 ----
-  6 - Menu de gestão de obras
-  7 - Menu de gestão de requisições
-  0 - Sair
-+ Escolha uma opção: Ficheiro a abrir: Menu Principal
-+ 1 - Abrir dados
-+ 2 - Guardar dados
-+ 3 - Ver data
-+ 4 - Avançar data
-+ 5 - Menu de gestão de utentes
-+ 6 - Menu de gestão de obras
-+ 7 - Menu de gestão de requisições
-+ 0 - Sair
-  Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
-  1 - Abrir dados
-  2 - Guardar dados
-***************
-*** 61,67 ****
-  6 - Menu de gestão de obras
-  7 - Menu de gestão de requisições
-  0 - Sair
-! Escolha uma opção: Menu Principal
-  1 - Abrir dados
-  2 - Guardar dados
-  3 - Ver data
---- 85,111 ----
-  6 - Menu de gestão de obras
-  7 - Menu de gestão de requisições
-  0 - Sair
-! Escolha uma opção: Ficheiro a abrir: Abrir dados: Operação inválida: O ficheiro '3' não existe.
-! Menu Principal
-! 1 - Abrir dados
-! 2 - Guardar dados
-! 3 - Ver data
-! 4 - Avançar data
-! 5 - Menu de gestão de utentes
-! 6 - Menu de gestão de obras
-! 7 - Menu de gestão de requisições
-! 0 - Sair
-! Escolha uma opção: Ficheiro a abrir: Abrir dados: Operação inválida: O ficheiro 's' não existe.
-! Menu Principal
-! 1 - Abrir dados
-! 2 - Guardar dados
-! 3 - Ver data
-! 4 - Avançar data
-! 5 - Menu de gestão de utentes
-! 6 - Menu de gestão de obras
-! 7 - Menu de gestão de requisições
-! 0 - Sair
 ! Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
-  1 - Abrir dados
-  2 - Guardar dados
-  3 - Ver data
-***************
-*** 70,94 ****
-  6 - Menu de gestão de obras
-  7 - Menu de gestão de requisições
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
   0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
+! 0 - Sair
 ! Escolha uma opção: Menu de Gestão de Utentes
 ! 1 - Registar utente
 ! 2 - Mostrar utente
@@ -165,50 +81,69 @@
   0 - Sair
   Escolha uma opção: Menu Principal
   1 - Abrir dados
-  2 - Guardar dados
-  3 - Ver data
-  4 - Avançar data
-  5 - Menu de gestão de utentes
-  6 - Menu de gestão de obras
---- 114,154 ----
-  6 - Menu de gestão de obras
-  7 - Menu de gestão de requisições
+--- 11,75 ----
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 7 deve ser devolvida no dia 0.
+  Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 7 deve ser devolvida no dia 0.
+! Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 0.
+  Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 0.
+  Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 0.
+  Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 0.
+! Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 7 não existe.
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
   0 - Sair
 ! Escolha uma opção: Menu de Gestão de Requisições
 ! 1 - Requisitar obra
 ! 2 - Devolver obra
   0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+  0 - Sair
   Escolha uma opção: Menu Principal
   1 - Abrir dados
-  2 - Guardar dados
-  3 - Ver data
-+ 4 - Avançar data
-+ 5 - Menu de gestão de utentes
-+ 6 - Menu de gestão de obras
-+ 7 - Menu de gestão de requisições
-+ 0 - Sair
-+ Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
-+ 1 - Abrir dados
-+ 2 - Guardar dados
-+ 3 - Ver data
-+ 4 - Avançar data
-+ 5 - Menu de gestão de utentes
-+ 6 - Menu de gestão de obras
-+ 7 - Menu de gestão de requisições
-+ 0 - Sair
-+ Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
-+ 1 - Abrir dados
-+ 2 - Guardar dados
-+ 3 - Ver data
-+ 4 - Avançar data
-+ 5 - Menu de gestão de utentes
-+ 6 - Menu de gestão de obras
-+ 7 - Menu de gestão de requisições
-+ 0 - Sair
-+ Escolha uma opção: Introduza número de dias a avançar: Menu Principal
-+ 1 - Abrir dados
-+ 2 - Guardar dados
-+ 3 - Ver data
-  4 - Avançar data
-  5 - Menu de gestão de utentes
-  6 - Menu de gestão de obras

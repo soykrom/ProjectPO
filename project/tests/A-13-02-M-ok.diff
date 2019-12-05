@@ -1,50 +1,34 @@
 *** tests/A-13-02-M-ok.out	2019-11-20 15:13:26.000000001 +0000
---- tests/A-13-02-M-ok.outhyp	2019-12-04 15:17:51.000000001 +0000
+--- tests/A-13-02-M-ok.outhyp	2019-12-05 10:57:39.000000001 +0000
 ***************
-*** 11,23 ****
+*** 11,22 ****
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
-! Menu de Gestão de Requisições
+  Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 2 deve ser devolvida no dia 15.
-! Menu de Gestão de Requisições
+  Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+--- 11,22 ----
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
---- 11,37 ----
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 0.
+  Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 2 deve ser devolvida no dia 0.
+  Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
 ***************
-*** 43,58 ****
+*** 43,102 ****
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
@@ -58,93 +42,93 @@
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
-  Escolha uma opção: Menu Principal
-  1 - Abrir dados
-  2 - Guardar dados
---- 57,88 ----
-  1 - Requisitar obra
-  2 - Devolver obra
+! Escolha uma opção: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
   0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
+! Escolha uma opção: Menu de Gestão de Utentes
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
 ! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-+ Escolha uma opção: Menu de Gestão de Requisições
-+ 1 - Requisitar obra
-+ 2 - Devolver obra
-+ 0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Abrir dados
-  2 - Guardar dados
-***************
-*** 70,76 ****
-  5 - Saldar multa de utente
-  0 - Sair
-  Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
+! Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
 ! 1 - Darth Vader - darth@dark.force.coAm - NORMAL - SUSPENSO - EUR 85
-  2 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
-  3 - Rey - real.last.jedi@universe.com - NORMAL - ACTIVO
-  Menu de Gestão de Utentes
---- 100,106 ----
-  5 - Saldar multa de utente
-  0 - Sair
-  Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
-! 1 - Darth Vader - darth@dark.force.coAm - NORMAL - ACTIVO
-  2 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
-  3 - Rey - real.last.jedi@universe.com - NORMAL - ACTIVO
-  Menu de Gestão de Utentes
-***************
-*** 80,96 ****
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
+! 2 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
+! 3 - Rey - real.last.jedi@universe.com - NORMAL - ACTIVO
+! Menu de Gestão de Utentes
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
+! 0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
-  3 - Listar utentes
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
+! 0 - Sair
 ! Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
 ! 1 - Darth Vader - darth@dark.force.coAm - NORMAL - ACTIVO
 ! 2 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
 ! 3 - Rey - real.last.jedi@universe.com - NORMAL - ACTIVO
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
---- 110,123 ----
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
+! Menu de Gestão de Utentes
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
   0 - Sair
-! Escolha uma opção: Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
-  3 - Listar utentes
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
+  Escolha uma opção: Menu Principal
+  1 - Abrir dados
+--- 43,81 ----
+  1 - Requisitar obra
+  2 - Devolver obra
   0 - Sair
-! Escolha uma opção: Introduza o nome do utente: Introduza o endereço de correio do utente: Novo utente criado com o número 4.
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
+! Escolha uma opção: Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número da obra: A obra 2 deve ser devolvida no dia 0.
+! Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número da obra: A obra 0 deve ser devolvida no dia 0.
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 0 deve ser devolvida no dia 0.
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+  0 - Sair
+  Escolha uma opção: Menu Principal
+  1 - Abrir dados
 ***************
 *** 107,110 ****
   6 - Menu de gestão de obras
@@ -152,7 +136,7 @@
   0 - Sair
 ! Escolha uma opção: 
 \ No newline at end of file
---- 134,137 ----
+--- 86,89 ----
   6 - Menu de gestão de obras
   7 - Menu de gestão de requisições
   0 - Sair
