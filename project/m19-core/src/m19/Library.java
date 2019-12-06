@@ -312,4 +312,13 @@ public class Library implements Serializable {
 
     return days;
   }
+  
+  public List<Notification> getAllNotifications(int userID) {
+    return _users.get(userID).getNotifications();
+  }
+
+  public void addObserver(Work work, User user) {
+    work.addObserver(user);
+  }
+
 }
