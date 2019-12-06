@@ -11,12 +11,14 @@ import m19.exceptions.FailedToOpenFileException;
 import m19.exceptions.LateDeliveryException;
 import m19.exceptions.UserNotFoundException;
 import m19.exceptions.WorkNotFoundException;
+import m19.exceptions.ActiveUserException;
 import m19.exceptions.ImportFileException;
 import java.lang.ClassNotFoundException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import m19.rules.OneRuleToRuleThemAll;
+import m19.notifications.Notification;
 import java.io.BufferedInputStream;
 import java.io.ObjectInputStream;
 import java.io.FileInputStream;
@@ -24,6 +26,7 @@ import java.io.BufferedReader;
 import java.util.Collections;
 import java.io.Serializable;
 import m19.requests.Request;
+import java.util.Observable;
 import java.util.ArrayList;
 import java.io.FileReader;
 import java.util.TreeMap;
@@ -287,6 +290,25 @@ public class Library implements Serializable {
   }
 
   /**
+   * Handles the fine payment process
+   * 
+   * @param userID
+   *        the users ID
+   * 
+   * @throws UserNotFoundException
+   * @throws ActiveUserException
+   *
+   */
+  public void payFine(int userID) throws UserNotFoundException, ActiveUserException {
+    User user = getUser(userID);
+    
+    if(user.getStatus()) throw new ActiveUserException();
+
+    user.setFine(0);
+    if(!(user.delayedRequests())) user.setStatus(true);
+  }
+
+  /**
    * Checks if work has search term in specific fields
    * 
    * @param work
@@ -333,14 +355,6 @@ public class Library implements Serializable {
     return _date + days;
   }
 
-  public List<Notification> getAllNotifications(int userID) {
-    return _users.get(userID).getNotifications();
-  }
-
-  public void addObserver(Work work, User user) {
-    work.addObserver(user);
-  }
-  
   /**
    * Subtracts from de days remaing until the deadline, the days advanced
    * 
@@ -378,13 +392,20 @@ public class Library implements Serializable {
     work.incrementLibraryCopies();
 
     if(r.getDays() < 0) throw new LateDeliveryException(r.getDays());
-
   }
 
-  public void requestNoti(String answer) {
-    if(answer.equals("s")) {
-      _receiver.addObserver();
-    }
+  public List<Notification> getAllNotifications(int userID) throws UserNotFoundException {
+    User user = getUser(userID);
+
+    return user.getNotifications();
+  }
+
+  public void requestNotification(String response, int userID, int workID) {
+    User user = _users.get(userID);
+    Work work = _works.get(workID);
+
+    if(response.equals("s"))
+      work.addObserver(user);
   }
 
 }

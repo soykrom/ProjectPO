@@ -1,6 +1,8 @@
 package m19.users;
 
 import m19.exceptions.WorkDoesntBelongToUserException;
+import m19.notifications.Notification;
+import java.util.Observable;
 import m19.requests.Request;
 import java.io.Serializable;
 import java.util.Comparator;
@@ -28,7 +30,7 @@ public class User implements Serializable, Observer {
     private int _fine;
 
     private List<Request> _requests;
-    
+
     private List<Notification> _notifications;
 
     public static final Comparator<User> USER_COMPARATOR = new Comparator<User>() {
@@ -92,6 +94,14 @@ public class User implements Serializable, Observer {
         _status = status;
     }
 
+    public List<Notification> getNotifications() {
+        return _notifications;
+    }
+    
+    public void setFine(int fine) {
+        _fine = fine;
+    }
+
     public boolean searchRequests(Work work) {
         for(Request r : _requests) {
             if(r.getWork().equals(work))
@@ -121,6 +131,22 @@ public class User implements Serializable, Observer {
         return _behaviour.getDaysTillDeadline(copies);
     }
 
+    public void changeDeadlines(int days) {
+        for(Request request : _requests) {
+            if(request.changeDeadline(days))
+                _status = false;
+        }
+    }
+
+    public boolean delayedRequests() {
+        for(Request request : _requests) {
+            if(request.getDays() < 0)
+                return true;
+        }
+
+        return false;
+    }
+    
     @Override
     public void update(Observable work, Object arg) {
         if(work instanceof Work) {
@@ -128,14 +154,7 @@ public class User implements Serializable, Observer {
             _notifications.add(new Notification(newWork.toString()));
         }
     }
-    
-    public void changeDeadlines(int days) {
-        for(Request request : _requests) {
-            if(request.changeDeadline(days))
-                _status = false;
-        }
-    }
-    
+
     @Override
     public String toString() {
         if(_status)

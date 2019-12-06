@@ -52,7 +52,7 @@ public class DoReturnWork extends Command<LibraryManager> {
 
         _form.parse();
 
-        _receiver.notificationHandler(_response.value()); //Function will be different, I'm just lazy. In this function it will be handled the fine payment, including changing the user to active~
+         //Function will be different, I'm just lazy. In this function it will be handled the fine payment, including changing the user to active~
 
         _form.clear();
         

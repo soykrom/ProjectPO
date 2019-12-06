@@ -2,6 +2,9 @@ package m19.works;
 
 import java.io.Serializable;
 import java.util.Observable;
+import java.util.ArrayList;
+import java.util.List;
+import m19.users.User;
 
 public abstract class Work extends Observable implements Serializable {
     //atributes

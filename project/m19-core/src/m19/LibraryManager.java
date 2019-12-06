@@ -9,11 +9,13 @@ import m19.exceptions.RuleUnsuccessfulException;
 import m19.exceptions.LateDeliveryException;
 import m19.exceptions.UserNotFoundException;
 import m19.exceptions.WorkNotFoundException;
+import m19.exceptions.ActiveUserException;
 import m19.exceptions.ImportFileException;
 import java.lang.ClassNotFoundException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import m19.notifications.Notification;
 import java.io.BufferedOutputStream;
 import java.io.BufferedInputStream;
 import java.io.ObjectOutputStream;
@@ -152,25 +154,23 @@ public class LibraryManager {
     return _library.performSearch(term);
   }
 
+  public void payFine(int userID) throws UserNotFoundException, ActiveUserException {
+    _library.payFine(userID);
+  }
+
   public int requestWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, RuleUnsuccessfulException {
     return _library.requestWork(userID, workID);
   }
 
-  public void notificationHandler(String response) {}
-
-  public List<Notification> getAllNotifications(int userID) {
-    return _library.getAllNotifications(userID);
+  public void requestNotification(String response, int userID, int workID) {
+    _library.requestNotification(response, userID, workID);
   }
 
-  public void addObserver(Work work, User user) {
-    _library.addObserver(work, user);
-  }
-  
-  public void requestNoti(String answer) {
-    _library.requestNoti(answer);
-  }
-  
   public void returnWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, WorkDoesntBelongToUserException, LateDeliveryException {
     _library.returnWork(userID, workID);
+  }
+
+  public List<Notification> getAllNotifications(int userID) throws UserNotFoundException {
+    return _library.getAllNotifications(userID);
   }
 }

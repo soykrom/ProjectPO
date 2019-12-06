@@ -1,7 +1,16 @@
 *** tests/A-09-02-M-ok.out	2019-11-20 15:12:32.000000001 +0000
---- tests/A-09-02-M-ok.outhyp	2019-12-06 17:56:17.000000001 +0000
+--- tests/A-09-02-M-ok.outhyp	2019-12-06 21:48:04.000000001 +0000
 ***************
-*** 53,66 ****
+*** 60,67 ****
+  4 - Mostrar notificações de utente
+  5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: ENTREGA: 7 - 1 de  1 - DVD - The rise of Skywalker - 20 - Técnica e Científica - J. J. Abrams - 200505551
+! Menu de Gestão de Utentes
+  1 - Registar utente
+  2 - Mostrar utente
+  3 - Listar utentes
+--- 60,66 ----
   4 - Mostrar notificações de utente
   5 - Saldar multa de utente
   0 - Sair
@@ -9,25 +18,3 @@
   1 - Registar utente
   2 - Mostrar utente
   3 - Listar utentes
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: ENTREGA: 7 - 1 de  1 - DVD - The rise of Skywalker - 20 - Técnica e Científica - J. J. Abrams - 200505551
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
---- 53,66 ----
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
-! Escolha uma opção: Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
-  3 - Listar utentes
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
-! Escolha uma opção: Introduza o nome do utente: Introduza o endereço de correio do utente: Novo utente criado com o número 4.
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
