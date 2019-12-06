@@ -158,6 +158,14 @@ public class LibraryManager {
 
   public void notificationHandler(String response) {}
 
+  public List<Notification> getAllNotifications(int userID) {
+    return _library.getAllNotifications(userID);
+  }
+
+  public void addObserver(Work work, User user) {
+    _library.addObserver(work, user);
+  }
+  
   public void returnWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, WorkDoesntBelongToUserException, LateDeliveryException {
     _library.returnWork(userID, workID);
   }

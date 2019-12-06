@@ -333,6 +333,14 @@ public class Library implements Serializable {
     return _date + days;
   }
 
+  public List<Notification> getAllNotifications(int userID) {
+    return _users.get(userID).getNotifications();
+  }
+
+  public void addObserver(Work work, User user) {
+    work.addObserver(user);
+  }
+  
   /**
    * Subtracts from de days remaing until the deadline, the days advanced
    * 
