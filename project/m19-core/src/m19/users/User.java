@@ -32,6 +32,7 @@ public class User implements Serializable, Observer {
 
     private List<Notification> _notifications;
 
+    private int _gundas;
     public static final Comparator<User> USER_COMPARATOR = new Comparator<User>() {
         public int compare(User u1, User u2) {
             Locale locale = Locale.getDefault();
