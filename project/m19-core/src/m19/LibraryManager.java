@@ -6,6 +6,7 @@ import m19.exceptions.BadEntrySpecificationException;
 import m19.exceptions.UserRegistrationFailException;
 import m19.exceptions.FailedToOpenFileException;
 import m19.exceptions.RuleUnsuccessfulException;
+import m19.exceptions.LateDeliveryException;
 import m19.exceptions.UserNotFoundException;
 import m19.exceptions.WorkNotFoundException;
 import m19.exceptions.ImportFileException;
@@ -157,16 +158,7 @@ public class LibraryManager {
 
   public void notificationHandler(String response) {}
 
-  public List<Notification> getAllNotifications(int userID) {
-    return _library.getAllNotifications(userID);
-  }
-
-  public void addObserver(Work work, User user) {
-    _library.addObserver(work, user);
-  }
-
-  public void returnWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, WorkDoesntBelongToUserException {
+  public void returnWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, WorkDoesntBelongToUserException, LateDeliveryException {
     _library.returnWork(userID, workID);
-
   }
 }

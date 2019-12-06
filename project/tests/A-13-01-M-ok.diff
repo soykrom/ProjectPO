@@ -1,7 +1,7 @@
 *** tests/A-13-01-M-ok.out	2019-11-20 15:13:26.000000001 +0000
---- tests/A-13-01-M-ok.outhyp	2019-12-06 15:27:15.000000001 +0000
+--- tests/A-13-01-M-ok.outhyp	2019-12-06 17:56:26.000000001 +0000
 ***************
-*** 20,77 ****
+*** 20,144 ****
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
@@ -33,7 +33,7 @@
 ! 5 - Menu de gestão de utentes
 ! 6 - Menu de gestão de obras
 ! 7 - Menu de gestão de requisições
-  0 - Sair
+! 0 - Sair
 ! Escolha uma opção: Introduza número de dias a avançar: Menu Principal
 ! 1 - Abrir dados
 ! 2 - Guardar dados
@@ -42,125 +42,64 @@
 ! 5 - Menu de gestão de utentes
 ! 6 - Menu de gestão de obras
 ! 7 - Menu de gestão de requisições
-  0 - Sair
+! 0 - Sair
 ! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: O utente 1 deve pagar uma multa de EUR 90.
 ! O utente deseja pagar multa (s/n)? Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: O utente 2 deve pagar uma multa de EUR 25.
 ! O utente deseja pagar multa (s/n)? Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-  Escolha uma opção: Menu Principal
-  1 - Abrir dados
-  2 - Guardar dados
---- 20,62 ----
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 1 não pode requisitar a obra 1. Violação da regra 2.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: A obra 3 deve ser devolvida no dia 15.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Opção inválida!
-! Menu de Gestão de Requisições
 ! 1 - Requisitar obra
 ! 2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Opção inválida!
-! Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Opção inválida!
-! Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Devolver obra: Operação inválida: A obra 1 não foi requisitada pelo utente 1.
-! Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Número inválido!
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Devolver obra: Operação inválida: A obra 2 não foi requisitada pelo utente 2.
-! Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-+ Escolha uma opção: Número inválido!
-  Escolha uma opção: Menu Principal
-  1 - Abrir dados
-  2 - Guardar dados
-***************
-*** 89,96 ****
-  5 - Saldar multa de utente
-  0 - Sair
-  Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
+! 0 - Sair
+! Escolha uma opção: Menu de Gestão de Utentes
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
+! 0 - Sair
+! Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
 ! 1 - Darth Vader - darth@dark.force.coAm - FALTOSO - SUSPENSO - EUR 90
 ! 2 - Luke Skywalker - last.jedi@universe.com - NORMAL - SUSPENSO - EUR 25
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
---- 74,81 ----
-  5 - Saldar multa de utente
-  0 - Sair
-  Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
-! 1 - Darth Vader - darth@dark.force.coAm - NORMAL - SUSPENSO - EUR 0
-! 2 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
-***************
-*** 98,113 ****
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
+! Menu de Gestão de Utentes
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
+! 0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
-  3 - Listar utentes
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
+! 0 - Sair
 ! Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
 ! 1 - Darth Vader - darth@dark.force.coAm - FALTOSO - ACTIVO
 ! 2 - Luke Skywalker - last.jedi@universe.com - NORMAL - SUSPENSO - EUR 25
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
---- 83,96 ----
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
-! Escolha uma opção: Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
-  3 - Listar utentes
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
-! Escolha uma opção: Introduza o nome do utente: Introduza o endereço de correio do utente: Novo utente criado com o número 3.
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
-***************
-*** 115,130 ****
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
-  0 - Sair
+! Menu de Gestão de Utentes
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
+! 0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Menu de Gestão de Utentes
 ! 1 - Registar utente
 ! 2 - Mostrar utente
@@ -171,14 +110,77 @@
 ! Escolha uma opção: 0 - Chewbacca - chewbacca@milenium.falcon.org - NORMAL - ACTIVO
 ! 1 - Darth Vader - darth@dark.force.coAm - FALTOSO - ACTIVO
 ! 2 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
---- 98,104 ----
-  4 - Mostrar notificações de utente
-  5 - Saldar multa de utente
+! Menu de Gestão de Utentes
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
   0 - Sair
-! Escolha uma opção: Introduza o número de utente: 3 - 3 - 5 - NORMAL - ACTIVO
-  Menu de Gestão de Utentes
-  1 - Registar utente
-  2 - Mostrar utente
+! Escolha uma opção: 
+\ No newline at end of file
+--- 20,74 ----
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 1 não pode requisitar a obra 1. Violação da regra 2.
+  Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: A obra 3 deve ser devolvida no dia 35.
+  Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Devolver obra: Operação inválida: A obra 1 não foi requisitada pelo utente 1.
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Número inválido!
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número de utente: Introduza o número da obra: Devolver obra: Operação inválida: A obra 5 não foi requisitada pelo utente 0.
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+! 0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 3 não existe.
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: Fim de entrada de dados (R-EOF): pt.tecnico.po.io.RuntimeEOFException: Fim do fluxo de dados de entrada

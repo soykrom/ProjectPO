@@ -1,9 +1,8 @@
 package m19.works;
 
 import java.io.Serializable;
-import java.util.Observable;
 
-public abstract class Work extends Observable implements Serializable {
+public abstract class Work implements Serializable {
     //atributes
     private int _workID;
     private String _title;
@@ -11,7 +10,6 @@ public abstract class Work extends Observable implements Serializable {
     private int _totalCopies;
     private int _libraryCopies;
     private Category _category;
-    private List<User> _observers;
 
     public enum Category {
         FICTION(true, "Ficção"),
@@ -67,6 +65,10 @@ public abstract class Work extends Observable implements Serializable {
 
     public void decrementLibraryCopies() {
         _libraryCopies--;
+    }
+
+    public void incrementLibraryCopies() {
+        _libraryCopies++;
     }
 
     public Category getCategory() {

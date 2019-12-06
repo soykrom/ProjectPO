@@ -7,6 +7,8 @@ import m19.exceptions.UserRegistrationFailException;
 import m19.exceptions.RuleUnsuccessfulException;
 import m19.exceptions.RuleUnsuccessfulException;
 import m19.exceptions.FailedToOpenFileException;
+import m19.exceptions.FailedToOpenFileException;
+import m19.exceptions.LateDeliveryException;
 import m19.exceptions.UserNotFoundException;
 import m19.exceptions.WorkNotFoundException;
 import m19.exceptions.ImportFileException;
@@ -328,15 +330,7 @@ public class Library implements Serializable {
     
     user.addRequest(request);
 
-    return days;
-  }
-  
-  public List<Notification> getAllNotifications(int userID) {
-    return _users.get(userID).getNotifications();
-  }
-
-  public void addObserver(Work work, User user) {
-    work.addObserver(user);
+    return _date + days;
   }
 
   /**
@@ -365,14 +359,18 @@ public class Library implements Serializable {
    * @throws WorkDoesntBelongToUserException
    * 
    */
-  public void returnWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, WorkDoesntBelongToUserException {
+  public void returnWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, WorkDoesntBelongToUserException, LateDeliveryException {
     User user = getUser(userID);
     Work work = getWork(workID);
 
     Request r = user.getRequest(work);
 
-    if(r == null) throw new WorkDoesntBelongToUserException();
-
     user.removeRequest(r);
+
+    work.incrementLibraryCopies();
+
+    if(r.getDays() < 0) throw new LateDeliveryException(r.getDays());
+
   }
+
 }

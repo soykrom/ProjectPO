@@ -6,15 +6,13 @@ import java.io.Serializable;
 import java.util.Comparator;
 import java.util.ArrayList;
 import java.text.Collator;
-import java.util.Observer;
 import java.util.TreeMap;
 import java.util.Locale;
 import java.util.List;
 import m19.works.Work;
 import java.util.Map;
 
-
-public class User implements Serializable, Observer {
+public class User implements Serializable {
     //Atributes
     private int _userID;
 
@@ -30,9 +28,6 @@ public class User implements Serializable, Observer {
 
     private List<Request> _requests;
 
-    private List<Notification> _notifications;
-
-    private int _gundas;
     public static final Comparator<User> USER_COMPARATOR = new Comparator<User>() {
         public int compare(User u1, User u2) {
             Locale locale = Locale.getDefault();
@@ -55,7 +50,6 @@ public class User implements Serializable, Observer {
         _behaviour = new NormalBehaviour();
         _fine = 0;
         _requests = new ArrayList<Request>();
-        _notifications = new ArrayList<Notification>();
     }
 
     public int getUserID() {
@@ -121,17 +115,6 @@ public class User implements Serializable, Observer {
 
     public int getDaysTillDeadline(int copies) {
         return _behaviour.getDaysTillDeadline(copies);
-
-    public List<Notification> getNotifications() {
-        return _notifications;
-    }
-
-    @Override
-    public void update(Observable work, Object arg) {
-        if(work instanceof Work) {
-            Work newWork = (Work) work;
-            _notifications.add(new Notification(newWork.toString()));
-        }
     }
 
     public void changeDeadlines(int days) {
