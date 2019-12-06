@@ -25,8 +25,6 @@ public class DoAdvanceDate extends Command<LibraryManager> {
   public final void execute() {
     _form.parse();
 
-    if(_delta.value() <= 0) return; //Exits if amount inputed isn't positive
-
     _receiver.advanceDate(_delta.value());
   }
 }

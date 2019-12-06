@@ -1,5 +1,6 @@
 package m19;
 
+import m19.exceptions.WorkDoesntBelongToUserException;
 import m19.exceptions.MissingFileAssociationException;
 import m19.exceptions.BadEntrySpecificationException;
 import m19.exceptions.UserRegistrationFailException;
@@ -155,4 +156,8 @@ public class LibraryManager {
   }
 
   public void notificationHandler(String response) {}
+
+  public void returnWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, WorkDoesntBelongToUserException {
+    _library.returnWork(userID, workID);
+  }
 }

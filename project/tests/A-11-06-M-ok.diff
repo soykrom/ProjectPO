@@ -1,120 +1,12 @@
 *** tests/A-11-06-M-ok.out	2019-11-20 15:13:04.000000001 +0000
---- tests/A-11-06-M-ok.outhyp	2019-12-06 10:23:51.000000001 +0000
+--- tests/A-11-06-M-ok.outhyp	2019-12-06 15:27:12.000000001 +0000
 ***************
-*** 16,49 ****
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Menu de Gestão de Requisições
+*** 38,132 ****
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
-! 0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
---- 16,42 ----
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 1 não pode requisitar a obra 1. Violação da regra 1.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 1 não pode requisitar a obra 1. Violação da regra 1.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 1 não pode requisitar a obra 1. Violação da regra 1.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
 ! Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-***************
-*** 56,90 ****
-  6 - Menu de gestão de obras
-  7 - Menu de gestão de requisições
-  0 - Sair
-- Escolha uma opção: Menu de Gestão de Utentes
-- 1 - Registar utente
-- 2 - Mostrar utente
-- 3 - Listar utentes
-- 4 - Mostrar notificações de utente
-- 5 - Saldar multa de utente
-- 0 - Sair
-- Escolha uma opção: Introduza o número de utente: 1 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
-- Menu de Gestão de Utentes
-- 1 - Registar utente
-- 2 - Mostrar utente
-- 3 - Listar utentes
-- 4 - Mostrar notificações de utente
-- 5 - Saldar multa de utente
-- 0 - Sair
-- Escolha uma opção: Menu Principal
-- 1 - Abrir dados
-- 2 - Guardar dados
-- 3 - Ver data
-- 4 - Avançar data
-- 5 - Menu de gestão de utentes
-- 6 - Menu de gestão de obras
-- 7 - Menu de gestão de requisições
-- 0 - Sair
-  Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
---- 49,59 ----
-  6 - Menu de gestão de obras
-  7 - Menu de gestão de requisições
-  0 - Sair
-  Escolha uma opção: Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-  0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 1 não pode requisitar a obra 1. Violação da regra 1.
-  Menu de Gestão de Requisições
-  1 - Requisitar obra
-  2 - Devolver obra
-***************
-*** 126,175 ****
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
@@ -138,7 +30,49 @@
 ! 4 - Mostrar notificações de utente
 ! 5 - Saldar multa de utente
 ! 0 - Sair
-! Escolha uma opção: Introduza o número de utente: 1 - Luke Skywalker - last.jedi@universe.com - CUMPRIDOR - ACTIVO
+! Escolha uma opção: Introduza o número de utente: 1 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
+! Menu de Gestão de Utentes
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
+! 0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
+! 0 - Sair
+! Escolha uma opção: Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
+  Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Menu Principal
+! 1 - Abrir dados
+! 2 - Guardar dados
+! 3 - Ver data
+! 4 - Avançar data
+! 5 - Menu de gestão de utentes
+! 6 - Menu de gestão de obras
+! 7 - Menu de gestão de requisições
+! 0 - Sair
+! Escolha uma opção: Menu de Gestão de Utentes
+! 1 - Registar utente
+! 2 - Mostrar utente
+! 3 - Listar utentes
+! 4 - Mostrar notificações de utente
+! 5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: 1 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
 ! Menu de Gestão de Utentes
 ! 1 - Registar utente
 ! 2 - Mostrar utente
@@ -155,37 +89,76 @@
 ! 6 - Menu de gestão de obras
 ! 7 - Menu de gestão de requisições
   0 - Sair
-! Escolha uma opção: Ficheiro sem nome. Guardar ficheiro como: Menu Principal
-! 1 - Abrir dados
-! 2 - Guardar dados
-! 3 - Ver data
-! 4 - Avançar data
-! 5 - Menu de gestão de utentes
-! 6 - Menu de gestão de obras
-! 7 - Menu de gestão de requisições
-  0 - Sair
-! Escolha uma opção: 
-\ No newline at end of file
---- 95,116 ----
+! Escolha uma opção: Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+--- 38,84 ----
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Deseja ser avisado quando algum exemplar for devolvido (s/n)? Menu de Gestão de Requisições
   1 - Requisitar obra
   2 - Devolver obra
   0 - Sair
 ! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 1 não pode requisitar a obra 0. Violação da regra 6.
 ! Menu de Gestão de Requisições
-! 1 - Requisitar obra
-! 2 - Devolver obra
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Devolver obra: Operação inválida: A obra 0 não foi requisitada pelo utente 1.
+  Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
   0 - Sair
 ! Escolha uma opção: Opção inválida!
 ! Menu de Gestão de Requisições
 ! 1 - Requisitar obra
 ! 2 - Devolver obra
   0 - Sair
-! Escolha uma opção: Menu de Gestão de Requisições
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 0 não pode requisitar a obra 5. Violação da regra 5.
+! Menu de Gestão de Requisições
 ! 1 - Requisitar obra
 ! 2 - Devolver obra
   0 - Sair
-! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número de utente: Introduza o número da obra: Fim de entrada de dados (R-EOF): pt.tecnico.po.io.RuntimeEOFException: Fim do fluxo de dados de entrada
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Devolver obra: Operação inválida: A obra 0 não foi requisitada pelo utente 1.
+! Menu de Gestão de Requisições
+! 1 - Requisitar obra
+! 2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Opção inválida!
+! Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Devolver obra: Operação inválida: A obra 1 não foi requisitada pelo utente 1.
+! Menu de Gestão de Requisições
+  1 - Requisitar obra
+  2 - Devolver obra
+  0 - Sair
+***************
+*** 146,152 ****
+  4 - Mostrar notificações de utente
+  5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: 1 - Luke Skywalker - last.jedi@universe.com - CUMPRIDOR - ACTIVO
+  Menu de Gestão de Utentes
+  1 - Registar utente
+  2 - Mostrar utente
+--- 98,104 ----
+  4 - Mostrar notificações de utente
+  5 - Saldar multa de utente
+  0 - Sair
+! Escolha uma opção: Introduza o número de utente: 1 - Luke Skywalker - last.jedi@universe.com - NORMAL - ACTIVO
+  Menu de Gestão de Utentes
+  1 - Registar utente
+  2 - Mostrar utente

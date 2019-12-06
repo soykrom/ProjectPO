@@ -20,34 +20,25 @@ Escolha uma opção: Introduza o número de utente: Introduza o número da obra:
 1 - Requisitar obra
 2 - Devolver obra
 0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
+Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Menu de Gestão de Requisições
 1 - Requisitar obra
 2 - Devolver obra
 0 - Sair
-Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 7 não existe.
+Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Deseja ser avisado quando algum exemplar for devolvido (s/n)? Menu de Gestão de Requisições
+1 - Requisitar obra
+2 - Devolver obra
+0 - Sair
+Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
 Menu de Gestão de Requisições
 1 - Requisitar obra
 2 - Devolver obra
 0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
-1 - Requisitar obra
-2 - Devolver obra
-0 - Sair
-Escolha uma opção: Opção inválida!
+Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
 Menu de Gestão de Requisições
 1 - Requisitar obra
 2 - Devolver obra
 0 - Sair
-Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Introduza o número de utente: Introduza o número da obra: A obra 1 deve ser devolvida no dia 8.
-Menu de Gestão de Requisições
-1 - Requisitar obra
-2 - Devolver obra
-0 - Sair
-Escolha uma opção: Menu de Gestão de Requisições
-1 - Requisitar obra
-2 - Devolver obra
-0 - Sair
-Escolha uma opção: Introduza o número de utente: Introduza o número da obra: A obra 3 deve ser devolvida no dia 15.
+Escolha uma opção: Introduza o número de utente: Introduza o número da obra: Requisitar obra: Operação inválida: O utente 3 não pode requisitar a obra 0. Violação da regra 6.
 Menu de Gestão de Requisições
 1 - Requisitar obra
 2 - Devolver obra
@@ -61,4 +52,4 @@ Escolha uma opção: Menu Principal
 6 - Menu de gestão de obras
 7 - Menu de gestão de requisições
 0 - Sair
-Escolha uma opção: 
+Escolha uma opção: Fim de entrada de dados (R-EOF): pt.tecnico.po.io.RuntimeEOFException: Fim do fluxo de dados de entrada

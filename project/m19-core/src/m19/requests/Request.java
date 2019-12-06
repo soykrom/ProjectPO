@@ -27,4 +27,10 @@ public class Request implements Serializable {
     public int getDays() {
         return _days;
     }
+
+    public boolean changeDeadline(int days) {
+        _days -= days;
+
+        return _days < 0;
+    }
 }

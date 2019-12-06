@@ -1,5 +1,6 @@
 package m19;
 
+import m19.exceptions.WorkDoesntBelongToUserException;
 import m19.exceptions.MissingFileAssociationException;
 import m19.exceptions.BadEntrySpecificationException;
 import m19.exceptions.UserRegistrationFailException;
@@ -137,6 +138,8 @@ public class Library implements Serializable {
     if(delta <= 0) return;
 
     _date += delta;
+
+    changeDeadlines(delta);
   }
 
   /**
@@ -296,6 +299,21 @@ public class Library implements Serializable {
     return work.searchTitle(term) || work.searchFields(term);
   }
 
+  /**
+   * Handles the process of a request
+   * 
+   * @param userID
+   *        ID of the user that is requesting a work
+   * 
+   * @param workID
+   *        ID of the requested work
+   * 
+   * @throws UserNotFoundException
+   * @throws WorkNotFoundException
+   * @throws RuleUnsuccessfulException
+   * 
+   * @return the number of days until the deadline
+   */
   public int requestWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, RuleUnsuccessfulException {
     User user = getUser(userID);
     Work work = getWork(workID);
@@ -311,5 +329,42 @@ public class Library implements Serializable {
     user.addRequest(request);
 
     return days;
+  }
+
+  /**
+   * Subtracts from de days remaing until the deadline, the days advanced
+   * 
+   * @param days
+   *        Number of days advanced
+   */
+  public void changeDeadlines(int days) {
+    for(User user : _users.values()) {
+      user.changeDeadlines(days);
+    }
+  }
+
+  /**
+   * Handles the process of a return
+   * 
+   * @param userID
+   *        ID of the user that is requesting a work
+   * 
+   * @param workID
+   *        ID of the requested work
+   * 
+   * @throws UserNotFoundException
+   * @throws WorkNotFoundException
+   * @throws WorkDoesntBelongToUserException
+   * 
+   */
+  public void returnWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, WorkDoesntBelongToUserException {
+    User user = getUser(userID);
+    Work work = getWork(workID);
+
+    Request r = user.getRequest(work);
+
+    if(r == null) throw new WorkDoesntBelongToUserException();
+
+    user.removeRequest(r);
   }
 }
