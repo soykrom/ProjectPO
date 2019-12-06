@@ -8,6 +8,7 @@ import java.text.Collator;
 import java.util.TreeMap;
 import java.util.Locale;
 import java.util.List;
+import m19.works.Work;
 import java.util.Map;
 
 public class User implements Serializable {
@@ -84,6 +85,22 @@ public class User implements Serializable {
 
     public void setStatus(boolean status) {
         _status = status;
+    }
+
+    public boolean searchRequests(Work work) {
+        for(Request r : _requests) {
+            if(r.getWork().equals(work))
+                return true;
+        }
+        return false;
+    }
+
+    public void addRequest(Request request) {
+        _requests.add(request);
+    }
+
+    public int getDaysTillDeadline(int copies) {
+        return _behaviour.getDaysTillDeadline(copies);
     }
 
     @Override

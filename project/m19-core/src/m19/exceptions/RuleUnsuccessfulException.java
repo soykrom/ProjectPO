@@ -6,8 +6,8 @@ public class RuleUnsuccessfulException extends Exception {
 
     private int _ruleNumber;
 
-    public RuleUnsuccessfulException(int rule) {
-        _ruleNumber = rule;
+    public RuleUnsuccessfulException(int ruleNumber) {
+        _ruleNumber = ruleNumber;
     }
 
     public int getRuleNumber() {

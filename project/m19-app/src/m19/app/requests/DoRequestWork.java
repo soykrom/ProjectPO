@@ -19,14 +19,14 @@ public class DoRequestWork extends Command<LibraryManager> {
 
   private Input<Integer> _userID;
   private Input<Integer> _workID;
+  private Input<String> _response;
+
 
   /**
    * @param receiver
    */
   public DoRequestWork(LibraryManager receiver) {
     super(Label.REQUEST_WORK, receiver);
-    _userID = _form.addIntegerInput(Message.requestUserId());
-    _workID = _form.addIntegerInput(Message.requestWorkId());
   }
 
   /** @see pt.tecnico.po.ui.Command#execute() */
@@ -34,16 +34,32 @@ public class DoRequestWork extends Command<LibraryManager> {
   public final void execute() throws DialogException {
     int days = 0;
 
+    _userID = _form.addIntegerInput(Message.requestUserId());
+    _workID = _form.addIntegerInput(Message.requestWorkId());
+
     _form.parse();
 
     try {
-      /*days =*/ _receiver.requestWork(_userID.value(), _workID.value());
+      days = _receiver.requestWork(_userID.value(), _workID.value());
     } catch(UserNotFoundException e) {throw new NoSuchUserException(_userID.value());}
       catch(WorkNotFoundException e) {throw new NoSuchWorkException(_workID.value());}
-      catch(RuleUnsuccessfulException e) {throw new RuleFailedException(_userID.value(), _workID.value(), e.getRuleNumber());}
+      catch(RuleUnsuccessfulException e) {
+        if(e.getRuleNumber() != 3) throw new RuleFailedException(_userID.value(), _workID.value(), e.getRuleNumber());
+        _form.clear();
 
+        _response = _form.addStringInput(Message.requestReturnNotificationPreference());
+
+        _form.parse();
+
+        _receiver.notificationHandler(_response.value());
+
+        _form.clear();
+        return;
+      }
+    
     _display.popup(Message.workReturnDay(_workID.value(), days));
 
+    _form.clear();
   }
 
 }

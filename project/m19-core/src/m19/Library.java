@@ -148,7 +148,7 @@ public class Library implements Serializable {
    * @return the user correspondent to the given ID number.
    */
   public User getUser(int id) throws UserNotFoundException {
-    if(id > _users.size() - 1) throw new UserNotFoundException();
+    if(id > _users.size() - 1 || id < 0) throw new UserNotFoundException();
 
     return _users.get(id);    
   }
@@ -296,14 +296,20 @@ public class Library implements Serializable {
     return work.searchTitle(term) || work.searchFields(term);
   }
 
-  public void requestWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, RuleUnsuccessfulException {
+  public int requestWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, RuleUnsuccessfulException {
     User user = getUser(userID);
     Work work = getWork(workID);
 
-    Request request = new Request(user, work);
-    //void to be changed to int, number of days to deadline
+    int days = user.getDaysTillDeadline(work.getTotalCopies());
+
+    Request request = new Request(user, work, days);
 
     (new OneRuleToRuleThemAll(request)).validate();
 
+    work.decrementLibraryCopies();
+    
+    user.addRequest(request);
+
+    return days;
   }
 }

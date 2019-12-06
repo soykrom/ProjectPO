@@ -14,6 +14,6 @@ public class RequestWorkTwiceRule implements Rule {
     }
 
     public void validate() throws RuleUnsuccessfulException {
-        //if(_user.searchRequests(_work)) throw new RuleUnsuccessfulException(1);
+        if(_user.searchRequests(_work)) throw new RuleUnsuccessfulException(1);
     }
 }

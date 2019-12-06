@@ -55,8 +55,16 @@ public abstract class Work implements Serializable {
         return _price;
     }
 
+    public int getTotalCopies() {
+        return _totalCopies;
+    }
+
     public int getLibraryCopies() {
         return _libraryCopies;
+    }
+
+    public void decrementLibraryCopies() {
+        _libraryCopies--;
     }
 
     public Category getCategory() {

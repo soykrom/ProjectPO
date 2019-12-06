@@ -8,10 +8,12 @@ public class Request implements Serializable {
     //Atributes
     private User _user;
     private Work _work;
+    private int _days;
 
-    public Request(User user, Work work) {
+    public Request(User user, Work work, int days) {
         _user = user;
         _work = work;
+        _days = days;
     }
 
     public User getUser() {
@@ -20,5 +22,9 @@ public class Request implements Serializable {
 
     public Work getWork() {
         return _work;
+    }
+
+    public int getDays() {
+        return _days;
     }
 }

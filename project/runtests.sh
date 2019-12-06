@@ -1,5 +1,7 @@
 #!/bin/bash
 #export CVSROOT=:ext:ist192494@sigma.ist.utl.pt:/afs/ist.utl.pt/groups/leic-po/po19/cvs/080
+
+
 let total=0;
 let correct=0;
 export CLASSPATH=./m19-app/m19-app.jar:./m19-core/m19-core.jar:./po-uuilib/po-uuilib.jar:.

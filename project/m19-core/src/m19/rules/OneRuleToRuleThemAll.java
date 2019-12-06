@@ -12,6 +12,7 @@ public class OneRuleToRuleThemAll implements Rule {
         _request = request;
     }
 
+    @Override
     public void validate() throws RuleUnsuccessfulException {
         
         (new RequestWorkTwiceRule(_request.getUser(), _request.getWork())).validate();

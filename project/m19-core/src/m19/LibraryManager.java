@@ -117,10 +117,11 @@ public class LibraryManager {
     return _library.getDate();
   }
 
-  public void advanceDate(int delta) { //input has already been validated
+  public void advanceDate(int delta) {
+    changeSaved(true);
+
     _library.advanceDate(delta);
 
-    changeSaved(true);
   }
 
   public int addUser(String name, String email) throws UserRegistrationFailException {
@@ -149,8 +150,9 @@ public class LibraryManager {
     return _library.performSearch(term);
   }
 
-  public void requestWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, RuleUnsuccessfulException {
-    //void to be changed to int, number of days to deadline
-    _library.requestWork(userID, workID);
+  public int requestWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, RuleUnsuccessfulException {
+    return _library.requestWork(userID, workID);
   }
+
+  public void notificationHandler(String response) {}
 }

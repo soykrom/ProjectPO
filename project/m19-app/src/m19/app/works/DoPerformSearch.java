@@ -29,7 +29,7 @@ public class DoPerformSearch extends Command<LibraryManager> {
 
     List<Work> works = _receiver.performSearch(_term.value());
 
-    for(Work work: works)
+    for(Work work : works)
       _display.addLine(work.toString());
 
     _display.display();
