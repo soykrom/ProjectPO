@@ -51,7 +51,7 @@ public class DoRequestWork extends Command<LibraryManager> {
 
         _form.parse();
 
-        _receiver.notificationHandler(_response.value());
+        _reciever.requestNoti(_response.value());
 
         _form.clear();
         return;

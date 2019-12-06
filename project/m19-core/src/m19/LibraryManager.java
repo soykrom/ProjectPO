@@ -166,6 +166,10 @@ public class LibraryManager {
     _library.addObserver(work, user);
   }
   
+  public void requestNoti(String answer) {
+    _library.requestNoti(answer);
+  }
+  
   public void returnWork(int userID, int workID) throws UserNotFoundException, WorkNotFoundException, WorkDoesntBelongToUserException, LateDeliveryException {
     _library.returnWork(userID, workID);
   }

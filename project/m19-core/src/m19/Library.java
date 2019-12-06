@@ -381,4 +381,10 @@ public class Library implements Serializable {
 
   }
 
+  public void requestNoti(String answer) {
+    if(answer.equals("s")) {
+      _receiver.addObserver();
+    }
+  }
+
 }
