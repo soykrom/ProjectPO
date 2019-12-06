@@ -1,5 +1,6 @@
 package m19.users;
 
+import m19.exceptions.WorkDoesntBelongToUserException;
 import m19.requests.Request;
 import java.io.Serializable;
 import java.util.Comparator;
@@ -100,8 +101,21 @@ public class User implements Serializable, Observer {
         return false;
     }
 
+    public Request getRequest(Work work) throws WorkDoesntBelongToUserException {
+        for(Request r : _requests) {
+            if(r.getWork().equals(work))
+                return r;
+        }
+
+        throw new WorkDoesntBelongToUserException();
+    }
+
     public void addRequest(Request request) {
         _requests.add(request);
+    }
+
+    public void removeRequest(Request request) {
+        _requests.remove(request);
     }
 
     public int getDaysTillDeadline(int copies) {
@@ -119,6 +133,13 @@ public class User implements Serializable, Observer {
         }
     }
 
+    public void changeDeadlines(int days) {
+        for(Request request : _requests) {
+            if(request.changeDeadline(days))
+                _status = false;
+        }
+    }
+    
     @Override
     public String toString() {
         if(_status)
