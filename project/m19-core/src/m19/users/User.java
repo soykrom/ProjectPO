@@ -1,21 +1,20 @@
 package m19.users;
 
 import m19.exceptions.WorkDoesntBelongToUserException;
+import m19.notifications.ReturnNotification;
 import m19.notifications.Notification;
-import java.util.Observable;
 import m19.requests.Request;
 import java.io.Serializable;
 import java.util.Comparator;
 import java.util.ArrayList;
 import java.text.Collator;
-import java.util.Observer;
 import java.util.TreeMap;
 import java.util.Locale;
 import java.util.List;
 import m19.works.Work;
 import java.util.Map;
 
-public class User implements Serializable, Observer {
+public class User implements Serializable {
     //Atributes
     private int _userID;
 
@@ -147,12 +146,8 @@ public class User implements Serializable, Observer {
         return false;
     }
     
-    @Override
-    public void update(Observable work, Object arg) {
-        if(work instanceof Work) {
-            Work newWork = (Work) work;
-            _notifications.add(new Notification(newWork.toString()));
-        }
+    public void addNotification(Work work) {
+        _notifications.add(new ReturnNotification(work.toString()));
     }
 
     @Override

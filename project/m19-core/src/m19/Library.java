@@ -26,7 +26,6 @@ import java.io.BufferedReader;
 import java.util.Collections;
 import java.io.Serializable;
 import m19.requests.Request;
-import java.util.Observable;
 import java.util.ArrayList;
 import java.io.FileReader;
 import java.util.TreeMap;
@@ -355,6 +354,15 @@ public class Library implements Serializable {
     return _date + days;
   }
 
+  public void requestNotification(String response, int userID, int workID) {
+    if(response.equals("s")) {
+      User user = _users.get(userID);
+      Work work = _works.get(workID);
+  
+      work.addObserver(user);
+    }
+  }
+
   /**
    * Subtracts from de days remaing until the deadline, the days advanced
    * 
@@ -394,18 +402,21 @@ public class Library implements Serializable {
     if(r.getDays() < 0) throw new LateDeliveryException(r.getDays());
   }
 
+  public void requestPayment(String response, int userID) {
+    if(response.equals("s")) {
+      User user = _users.get(userID);
+
+      user.setFine(0);
+      if(!(user.delayedRequests())) user.setStatus(true);
+    }
+  }
+
   public List<Notification> getAllNotifications(int userID) throws UserNotFoundException {
     User user = getUser(userID);
 
     return user.getNotifications();
   }
 
-  public void requestNotification(String response, int userID, int workID) {
-    User user = _users.get(userID);
-    Work work = _works.get(workID);
 
-    if(response.equals("s"))
-      work.addObserver(user);
-  }
 
 }

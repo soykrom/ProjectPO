@@ -170,6 +170,10 @@ public class LibraryManager {
     _library.returnWork(userID, workID);
   }
 
+  public void requestPayment(String response, int userID) {
+    _library.requestPayment(response, userID);
+  }
+
   public List<Notification> getAllNotifications(int userID) throws UserNotFoundException {
     return _library.getAllNotifications(userID);
   }

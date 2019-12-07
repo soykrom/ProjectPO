@@ -1,12 +1,11 @@
 package m19.works;
 
 import java.io.Serializable;
-import java.util.Observable;
 import java.util.ArrayList;
 import java.util.List;
 import m19.users.User;
 
-public abstract class Work extends Observable implements Serializable {
+public abstract class Work implements Serializable {
     //atributes
     private int _workID;
     private String _title;
@@ -74,7 +73,11 @@ public abstract class Work extends Observable implements Serializable {
     }
 
     public void incrementLibraryCopies() {
-        _libraryCopies++;
+        if(_libraryCopies++ == 0) {
+            for(User user : _observers) {
+                user.addNotification(this);
+            }
+        }
     }
 
     public Category getCategory() {
@@ -86,6 +89,10 @@ public abstract class Work extends Observable implements Serializable {
     }
 
     public abstract boolean searchFields(String term);
+
+    public void addObserver(User user) {
+        _observers.add(user);
+    }
 
     @Override 
     public String toString() {
