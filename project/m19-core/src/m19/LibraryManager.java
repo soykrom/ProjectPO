@@ -34,16 +34,14 @@ import m19.works.Work;
 public class LibraryManager {
 
   private String _filename;
-  private boolean _saveStatus; //Controls if there has been any changes
   private Library _library;
 
   public LibraryManager() {
-    _saveStatus = false;
     _filename = "";
     _library = new Library();
   }
+
   public LibraryManager(String filename) {
-    _saveStatus = false;
     _filename = filename;
     _library = new Library();
   }
@@ -68,12 +66,12 @@ public class LibraryManager {
    * @throws IOException
    */
   public void saveAs(String filename) throws MissingFileAssociationException, IOException {
-    if(!_saveStatus) return; //if there haven't been changes, exits
+    if(!_library.getSaveStatus()) return; //if there haven't been changes, exits
 
     _filename = filename;
     save();
 
-    changeSaved(false);
+    _library.setSaveStatus(false);
   }
 
   /**
@@ -92,7 +90,7 @@ public class LibraryManager {
 
     _filename = filename;
 
-    changeSaved(false);
+    _library.setSaveStatus(false);
   }
 
   /**
@@ -105,16 +103,10 @@ public class LibraryManager {
     } catch (IOException | BadEntrySpecificationException e) {
       throw new ImportFileException(e);
     }
-
-    changeSaved(true);
   } 
 
   public String getFilename() {
     return _filename;
-  }
-
-  public void changeSaved(boolean newStatus) {
-    _saveStatus = newStatus;
   }
 
   public int getDate() {
@@ -122,15 +114,11 @@ public class LibraryManager {
   }
 
   public void advanceDate(int delta) {
-    changeSaved(true);
-
     _library.advanceDate(delta);
 
   }
 
   public int addUser(String name, String email) throws UserRegistrationFailException {
-    changeSaved(true);
-
     return _library.addUser(name, email);
   }
 

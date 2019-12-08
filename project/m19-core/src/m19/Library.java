@@ -59,6 +59,9 @@ public class Library implements Serializable {
   /** Mapping between ID number and its correspondent work */
   private Map<Integer, Work> _works;
 
+  /** Controls if there has been any changes */
+  private boolean _saveStatus; 
+
    /**
    * Constructor.
    *
@@ -70,6 +73,7 @@ public class Library implements Serializable {
     _users = new TreeMap<Integer, User>();
     _lastWorkID = 0;
     _works = new TreeMap<Integer, Work>();
+    _saveStatus = false;
   }
 
   /**
@@ -117,6 +121,16 @@ public class Library implements Serializable {
     } catch(BadEntrySpecificationException e) {e.printStackTrace();}
       catch(IOException e) {e.printStackTrace();} 
       catch(UserRegistrationFailException e) {e.printStackTrace();}
+
+    _saveStatus = true;
+  }
+
+  public boolean getSaveStatus() {
+    return _saveStatus;
+  }
+
+  public void setSaveStatus(boolean status) {
+    _saveStatus = status;
   }
 
   /** 
@@ -144,6 +158,8 @@ public class Library implements Serializable {
     _date += delta;
 
     changeDeadlines(delta);
+
+    _saveStatus = true;
   }
 
   /**
@@ -187,6 +203,8 @@ public class Library implements Serializable {
     User newUser = new User(_lastUserID, name, email);
 
     _users.put(_lastUserID, newUser);
+
+    _saveStatus = true;
 
     return _lastUserID++;
   }
@@ -305,6 +323,8 @@ public class Library implements Serializable {
 
     user.setFine(0);
     if(!(user.delayedRequests())) user.setStatus(true);
+
+    _saveStatus = true;
   }
 
   /**
@@ -351,6 +371,8 @@ public class Library implements Serializable {
     
     user.addRequest(request);
 
+    _saveStatus = true;
+
     return _date + days;
   }
 
@@ -361,6 +383,8 @@ public class Library implements Serializable {
   
       work.addObserver(user);
     }
+
+    _saveStatus = true;
   }
 
   /**
@@ -400,6 +424,7 @@ public class Library implements Serializable {
 
     work.incrementLibraryCopies();
 
+    _saveStatus = true;
     if(r.getDays() < 0) {
       user.updateFine(r.getDays()); 
       throw new LateDeliveryException(user.getFine());
@@ -413,6 +438,8 @@ public class Library implements Serializable {
       user.setFine(0);
       if(!(user.delayedRequests())) user.setStatus(true);
     }
+
+    _saveStatus = true;
   }
 
   public List<Notification> getAllNotifications(int userID) throws UserNotFoundException {
@@ -420,7 +447,5 @@ public class Library implements Serializable {
 
     return user.getNotifications();
   }
-
-
 
 }
