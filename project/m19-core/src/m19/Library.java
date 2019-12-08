@@ -396,10 +396,14 @@ public class Library implements Serializable {
     Request r = user.getRequest(work);
 
     user.removeRequest(r);
+    user.getBehaviour().updateBehaviour(user);
 
     work.incrementLibraryCopies();
 
-    if(r.getDays() < 0) throw new LateDeliveryException(r.getDays());
+    if(r.getDays() < 0) {
+      user.updateFine(r.getDays()); 
+      throw new LateDeliveryException(user.getFine());
+    }
   }
 
   public void requestPayment(String response, int userID) {

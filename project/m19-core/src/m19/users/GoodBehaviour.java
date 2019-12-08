@@ -2,6 +2,7 @@ package m19.users;
 
 import java.util.ArrayList;
 import java.util.List;
+import m19.users.User;
 
 public class GoodBehaviour extends UserBehaviour {
     //atributes
@@ -19,6 +20,11 @@ public class GoodBehaviour extends UserBehaviour {
                 }};
 
         setDays(DAYS);
+    }
+
+    @Override
+    public void updateBehaviour(User user) {
+        if(user.getDeliveries().get(0) == 0) user.setBehaviour(new NormalBehaviour());
     }
 
     @Override

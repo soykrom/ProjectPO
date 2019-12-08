@@ -3,8 +3,9 @@ package m19.users;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import m19.users.User;
 
-public class UserBehaviour implements Serializable {
+public abstract class UserBehaviour implements Serializable {
     //atributes
     private int _maxWorks;
     private List<Integer> _days;
@@ -31,4 +32,7 @@ public class UserBehaviour implements Serializable {
 
         return _days.get(n);
     }
+
+    public abstract void updateBehaviour(User user);
+
 }

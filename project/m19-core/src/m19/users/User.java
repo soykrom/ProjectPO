@@ -32,6 +32,8 @@ public class User implements Serializable {
 
     private List<Notification> _notifications;
 
+    private List<Integer> _deliveries;
+
     public static final Comparator<User> USER_COMPARATOR = new Comparator<User>() {
         public int compare(User u1, User u2) {
             Locale locale = Locale.getDefault();
@@ -55,6 +57,7 @@ public class User implements Serializable {
         _fine = 0;
         _requests = new ArrayList<Request>();
         _notifications = new ArrayList<Notification>();
+        _deliveries = new ArrayList<Integer>();
     }
 
     public int getUserID() {
@@ -71,6 +74,10 @@ public class User implements Serializable {
 
     public UserBehaviour getBehaviour() {
         return _behaviour;
+    }
+
+    public void setBehaviour(UserBehaviour behaviour) {
+        _behaviour = behaviour;
     }
     
     public int getMaxWorks() {
@@ -97,8 +104,20 @@ public class User implements Serializable {
         return _notifications;
     }
     
+    public int getFine() {
+        return _fine;
+    }
+
     public void setFine(int fine) {
         _fine = fine;
+    }
+
+    public List<Integer> getDeliveries() {
+        return  _deliveries;
+    }
+
+    public void updateFine(int days) {
+        _fine += days * (-5);
     }
 
     public boolean searchRequests(Work work) {
@@ -123,6 +142,11 @@ public class User implements Serializable {
     }
 
     public void removeRequest(Request request) {
+        if(request.getDays() >= 0) 
+            _deliveries.add(1);
+        else 
+            _deliveries.add(0);
+
         _requests.remove(request);
     }
 

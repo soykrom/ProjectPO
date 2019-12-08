@@ -33,6 +33,7 @@ public class DoRequestWork extends Command<LibraryManager> {
   @Override
   public final void execute() throws DialogException {
     int days = 0;
+    _form.clear();
 
     _userID = _form.addIntegerInput(Message.requestUserId());
     _workID = _form.addIntegerInput(Message.requestWorkId());
@@ -54,6 +55,7 @@ public class DoRequestWork extends Command<LibraryManager> {
         _receiver.requestNotification(_response.value(), _userID.value(), _workID.value());
 
         _form.clear();
+
         return;
       }
     

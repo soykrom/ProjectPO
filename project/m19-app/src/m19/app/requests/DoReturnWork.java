@@ -33,6 +33,8 @@ public class DoReturnWork extends Command<LibraryManager> {
   /** @see pt.tecnico.po.ui.Command#execute() */
   @Override
   public final void execute() throws DialogException {
+    _form.clear();
+
     _userID = _form.addIntegerInput(Message.requestUserId());
     _workID = _form.addIntegerInput(Message.requestWorkId());
 
@@ -52,10 +54,10 @@ public class DoReturnWork extends Command<LibraryManager> {
 
         _form.parse();
 
-         _receiver.requestPayment(_response.value(), _userID.value());//Function will be different, I'm just lazy. In this function it will be handled the fine payment, including changing the user to active~
+        _receiver.requestPayment(_response.value(), _userID.value());
 
         _form.clear();
-        
+
         return;
       }
 
