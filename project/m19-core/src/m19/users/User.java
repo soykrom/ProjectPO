@@ -101,7 +101,11 @@ public class User implements Serializable {
     }
 
     public List<Notification> getNotifications() {
-        return _notifications;
+        List<Notification> notifs = new ArrayList<Notification>(_notifications);
+
+        _notifications.clear();
+
+        return notifs;
     }
     
     public int getFine() {

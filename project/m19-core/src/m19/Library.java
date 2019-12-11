@@ -445,6 +445,8 @@ public class Library implements Serializable {
   public List<Notification> getAllNotifications(int userID) throws UserNotFoundException {
     User user = getUser(userID);
 
+    _saveStatus = true;
+
     return user.getNotifications();
   }
 

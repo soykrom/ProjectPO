@@ -24,7 +24,7 @@ public class GoodBehaviour extends UserBehaviour {
 
     @Override
     public void updateBehaviour(User user) {
-        if(user.getDeliveries().get(0) == 0) user.setBehaviour(new NormalBehaviour());
+        if(user.getDeliveries().get(user.getDeliveries().size() - 1) == 0) user.setBehaviour(new NormalBehaviour());
     }
 
     @Override

@@ -24,9 +24,9 @@ public class BadBehaviour extends UserBehaviour {
 
     @Override
     public void updateBehaviour(User user) {
-        List<Integer> lastDeliveries = user.getDeliveries().subList(0, 4);
+        List<Integer> lastDeliveries = user.getDeliveries();
 
-        for(int i = 0; i < 4; i++) {
+        for(int i = lastDeliveries.size() - 1; i > lastDeliveries.size() - 4; i--) {
             if(lastDeliveries.get(i) == 0)
                 return;
         }   

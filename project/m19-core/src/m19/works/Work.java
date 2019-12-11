@@ -78,6 +78,8 @@ public abstract class Work implements Serializable {
                 user.addNotification(this);
             }
         }
+
+        _observers = new ArrayList<User>();
     }
 
     public Category getCategory() {
